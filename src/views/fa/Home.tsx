@@ -11,8 +11,8 @@ export default function Home() {
     <>
       <section className="wrap hero">
         <div className="rise">
-          <p className="eyebrow ltr">{brand.nameEn}</p>
-          <h1>{brand.name}</h1>
+          <p className="eyebrow">طراحی داخلی / نجاری سفارشی / جزئیات</p>
+          <h1>فضاهای سنجیده،<br />ساخته‌شده برای شما</h1>
           <p>{brand.tagline}</p>
           <p className="lead">{brand.intro}</p>
           <div className="actions">
@@ -22,6 +22,7 @@ export default function Home() {
         </div>
         <figure>
           <Image src={hero.imagePath} alt={hero.alt} width={hero.width} height={hero.height} priority sizes="(max-width: 860px) 90vw, 440px" />
+          <figcaption>نمونه مرجع — آشپزخانه و کابینت</figcaption>
         </figure>
       </section>
 

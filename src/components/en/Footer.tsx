@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="wrap">
         <div>
-          <b>{brand.name}</b>
+          <b>{brand.name.split(" ")[0]} <span>{brand.name.split(" ").slice(1).join(" ")}</span></b>
           <p>{brand.tagline}</p>
         </div>
         <nav aria-label="Footer navigation">

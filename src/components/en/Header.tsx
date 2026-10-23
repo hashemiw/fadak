@@ -22,7 +22,7 @@ export default function Header() {
     <header className="header">
       <div className="wrap">
         <Link href="/en" className="brand" aria-label={`${brand.name} — Home`}>
-          <b>{brand.name}</b>
+          <b>{brand.name.split(" ")[0]} <span>{brand.name.split(" ").slice(1).join(" ")}</span></b>
           <small>INTERIORS &amp; BESPOKE WOODWORK</small>
         </Link>
         <nav id="site-nav" className={`nav${open ? " open" : ""}`} aria-label="Main navigation">

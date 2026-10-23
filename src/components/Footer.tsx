@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="wrap">
         <div>
-          <b>{brand.name}</b> <span className="ltr">{brand.nameEn}</span>
+          <b>{brand.name}</b>
           <p>{brand.tagline}</p>
         </div>
         <nav aria-label="پیوندهای پایین صفحه">

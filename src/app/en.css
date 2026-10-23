@@ -248,3 +248,8 @@ html[lang="en"] .page-head .lead { margin-top: 24px; }
  html[lang="en"] .nav { font-size: 15px; }
  html[lang="en"] .menu-btn { padding-inline: 10px; font-size: 13px; }
 }
+
+/* Wordmark: weight contrast makes the name read as a logo. */
+html[lang="en"] .brand b span { font-weight: 300; }
+html[lang="en"] .footer b { font-size: 28px; font-weight: 600; letter-spacing: -.06em; }
+html[lang="en"] .footer b span { font-weight: 300; }
