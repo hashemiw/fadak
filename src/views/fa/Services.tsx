@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { gallery } from "@/data/gallery";
 import { services } from "@/data/site";
 
-export const metadata: Metadata = { title: "خدمات", description: "طراحی داخلی، اجرای دکوراسیون، کابینت و کمد، تجهیزات اداری، دکور فروشگاهی و ساخت سفارشی چوبی." };
 
 export default function ServicesPage() {
   return (
@@ -22,13 +20,13 @@ export default function ServicesPage() {
                 <h2>{s.title}</h2>
                 <p className="lead" style={{ marginTop: 8 }}>{s.text}</p>
                 <div className="go">
-                  <Link href="/contact" className="link">درباره نیاز خود بنویسید</Link>
+                  <Link href="/fa/contact" className="link">درباره نیاز خود بنویسید</Link>
                 </div>
               </div>
               {items.length > 0 && (
                 <div className="thumbs">
                   {items.map((g) => (
-                    <Link key={g.id} href={`/gallery/${g.slug}`} aria-label={g.title}>
+                    <Link key={g.id} href={`/fa/gallery/${g.slug}`} aria-label={g.title}>
                       <Image src={g.imagePath} alt={g.alt} width={220} height={220} sizes="110px" loading="lazy" />
                     </Link>
                   ))}

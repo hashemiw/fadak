@@ -1,16 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { about, process } from "@/data/site";
+import { about, process } from "@/data/site-en";
 
-export const metadata: Metadata = { title: "درباره فدک", description: about.lead };
 
 export default function AboutPage() {
   return (
     <>
       <div className="wrap">
         <div className="page-head">
-          <h1>درباره فدک</h1>
+          <h1>About the atelier</h1>
           <p className="lead">{about.lead}</p>
         </div>
         <div className="about-grid" style={{ paddingBottom: 56 }}>
@@ -30,9 +28,9 @@ export default function AboutPage() {
       </div>
       <section className="section alt">
         <div className="wrap">
-          <h2 className="h2" style={{ marginBottom: 32 }}>مراحل همکاری</h2>
+          <h2 className="h2" style={{ marginBottom: 32 }}>How we work</h2>
           <ol className="steps">{process.map((s) => <li key={s.title}><b>{s.title}</b><span>{s.text}</span></li>)}</ol>
-          <p style={{ marginTop: 40 }}><Link href="/contact" className="btn">درخواست مشاوره</Link></p>
+          <p style={{ marginTop: 40 }}><Link href="/en/contact" className="btn">Start a conversation</Link></p>
         </div>
       </section>
     </>

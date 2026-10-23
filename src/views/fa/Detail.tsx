@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -8,13 +7,7 @@ import { categories, gallery, getItem } from "@/data/gallery";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export const dynamicParams = false;
-export const generateStaticParams = () => gallery.map((g) => ({ slug: g.slug }));
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const item = getItem((await params).slug);
-  return item ? { title: item.title, description: item.description.slice(0, 160) } : {};
-}
 
 export default async function ItemPage({ params }: Props) {
   const item = getItem((await params).slug);
@@ -23,7 +16,7 @@ export default async function ItemPage({ params }: Props) {
 
   return (
     <div className="wrap">
-      <p className="crumbs"><Link href="/gallery">گالری</Link> / {categories[item.category]}</p>
+      <p className="crumbs"><Link href="/fa/gallery">گالری</Link> / {categories[item.category]}</p>
       <article className="detail">
         <figure>
           <Image src={item.imagePath} alt={item.alt} width={item.width} height={item.height} priority sizes="(max-width: 860px) 100vw, 700px" quality={85} style={{ margin: "0 auto", maxWidth: item.width }} />
@@ -44,7 +37,7 @@ export default async function ItemPage({ params }: Props) {
           )}
           {item.watermark && <p className="note">روی این تصویر نشان یا نوشته‌ای از منبع دیگر دیده می‌شود؛ تصویر مرجع است و به آتلیه فدک نسبت داده نمی‌شود.</p>}
           {item.kind === "reference-3d" && <p className="note">بر اساس نام فایل منبع، این تصویر مدل سه‌بعدی است، نه عکس اجرای واقعی.</p>}
-          <div className="actions"><Link href="/contact" className="btn">درخواست مشاوره</Link></div>
+          <div className="actions"><Link href="/fa/contact" className="btn">درخواست مشاوره</Link></div>
         </div>
       </article>
       {related.length > 0 && (

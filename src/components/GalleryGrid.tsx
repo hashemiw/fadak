@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
 import Card from "./Card";
-import { categories, type Category, type GalleryItem } from "@/data/gallery";
+import { categories, type Category, type PublicGalleryItem } from "@/data/gallery";
 
-export default function GalleryGrid({ items }: { items: GalleryItem[] }) {
+export default function GalleryGrid({ items }: { items: PublicGalleryItem[] }) {
   const [cat, setCat] = useState<Category | "all">("all");
   const [type, setType] = useState("all");
 

@@ -16,8 +16,8 @@ export default function Home() {
           <p>{brand.tagline}</p>
           <p className="lead">{brand.intro}</p>
           <div className="actions">
-            <Link href="/gallery" className="btn">دیدن گالری</Link>
-            <Link href="/contact" className="btn ghost">گفت‌وگو درباره پروژه شما</Link>
+            <Link href="/fa/gallery" className="btn">دیدن گالری</Link>
+            <Link href="/fa/contact" className="btn ghost">گفت‌وگو درباره پروژه شما</Link>
           </div>
         </div>
         <figure>
@@ -33,7 +33,7 @@ export default function Home() {
               <h2 className="h2">منتخبی از فضاها</h2>
               <p className="lead">{galleryIntro}</p>
             </div>
-            <Link href="/gallery" className="link">مشاهده کل گالری</Link>
+            <Link href="/fa/gallery" className="link">مشاهده کل گالری</Link>
           </div>
           <div className="masonry">
             {featured.map((i) => <Card key={i.id} item={i} sizes="(max-width: 480px) 100vw, (max-width: 900px) 50vw, 400px" />)}
@@ -63,7 +63,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <h2 className="h2">خدمات</h2>
-            <Link href="/services" className="link">جزئیات خدمات</Link>
+            <Link href="/fa/services" className="link">جزئیات خدمات</Link>
           </div>
           <div className="svc-list">
             {services.map((s) => (
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div>
             <p>آتلیه فدک در زمینه طراحی داخلی، اجرای دکوراسیون و ساخت سفارشی سازه‌ها و تجهیزات چوبی فعالیت می‌کند.</p>
-            <p><Link href="/about" className="link">بیشتر بخوانید</Link></p>
+            <p><Link href="/fa/about" className="link">بیشتر بخوانید</Link></p>
           </div>
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function Home() {
         <div className="wrap">
           <h2 className="h2">برای فضای شما چه چیزی بسازیم؟</h2>
           <p>نیاز و ابعاد فضایتان را برای ما بنویسید.</p>
-          <Link href="/contact" className="btn">درخواست مشاوره</Link>
+          <Link href="/fa/contact" className="btn">درخواست مشاوره</Link>
         </div>
       </section>
     </>

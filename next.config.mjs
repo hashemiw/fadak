@@ -1,7 +1,13 @@
+const removed = "bright-office-group-desks-dividers";
 const nextConfig = {
+  experimental: { globalNotFound: true },
   async redirects() {
-    // Removed from the site: poor framing / black borders.
-    return [{ source: "/gallery/bright-office-group-desks-dividers", destination: "/gallery", permanent: true }];
+    return [
+      { source: "/", destination: "/en", permanent: false },
+      { source: `/gallery/${removed}`, destination: "/fa/gallery", permanent: true },
+      ...["en", "fa"].map(locale => ({ source: `/${locale}/gallery/${removed}`, destination: `/${locale}/gallery`, permanent: true })),
+      ...["gallery", "services", "about", "contact"].map(page => ({ source: `/${page}/:path*`, destination: `/fa/${page}/:path*`, permanent: true })),
+    ];
   },
 };
 export default nextConfig;

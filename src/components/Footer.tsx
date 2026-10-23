@@ -11,7 +11,7 @@ export default function Footer() {
           <p>{brand.tagline}</p>
         </div>
         <nav aria-label="پیوندهای پایین صفحه">
-          {nav.map((n) => <Link key={n.href} href={n.href}>{n.label}</Link>)}
+          {nav.map((n) => <Link key={n.href} href={`/fa${n.href === "/" ? "" : n.href}`}>{n.label}</Link>)}
         </nav>
         {(contact.phone || contact.instagram || contact.serviceArea) && (
           <div>

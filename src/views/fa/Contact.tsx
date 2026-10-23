@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { contact } from "@/data/contact";
 
-export const metadata: Metadata = { title: "تماس", description: "درخواست مشاوره برای پروژه طراحی داخلی و ساخت سفارشی." };
 
 export default function ContactPage() {
   const links = [

@@ -127,3 +127,6 @@ dup.alsoOriginalPaths = ["/Users/hashemi/Downloads/Office Interior.jpg"];
 export const gallery: GalleryItem[] = [...batch1, ...batch2];
 
 export const getItem = (slug: string) => gallery.find((g) => g.slug === slug);
+
+export type PublicGalleryItem = Omit<GalleryItem, "originalPath" | "alsoOriginalPaths">;
+export const publicGalleryItem = ({ originalPath: _source, alsoOriginalPaths: _duplicates, ...item }: GalleryItem): PublicGalleryItem => item;

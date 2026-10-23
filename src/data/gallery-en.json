@@ -1,0 +1,536 @@
+{
+  "b1-02": {
+    "title": "Light cabinetry with a glass display",
+    "description": "Pale, plain-front cabinets sit alongside a dark-framed glass display and open shelves. Warm linear lighting, a wood-look central surface and curved edges give the composition a calm, continuous feel.",
+    "alt": "Light cabinetry with a glass display — Decorative cabinetry & display",
+    "subcategory": "Decorative cabinetry & display",
+    "tags": [
+      "Decorative cabinetry",
+      "Display unit",
+      "Open shelves",
+      "Curved form",
+      "Concealed lighting"
+    ],
+    "workTypes": [
+      "Cabinetry",
+      "Display unit"
+    ]
+  },
+  "b1-03": {
+    "title": "Wall workstation with full-height storage",
+    "description": "A continuous wall desk provides several computer stations and drawers beneath. Tall pale cupboards, dark open shelves and wood-look wall panels bring work and storage into one orderly arrangement.",
+    "alt": "Wall workstation with full-height storage — Workstation",
+    "subcategory": "Workstation",
+    "tags": [
+      "Shared workstation",
+      "Office storage",
+      "Shelving",
+      "Linear lighting",
+      "Storage"
+    ],
+    "workTypes": [
+      "Shared desks"
+    ]
+  },
+  "b1-04": {
+    "title": "Light executive desk and illuminated bookcase",
+    "description": "A large desk pairs neutral tones with a dark top and warm lighting across its front. Open shelving and fluted surfaces behind the desk echo the room's lines.",
+    "alt": "Light executive desk and illuminated bookcase — Executive office",
+    "subcategory": "Executive office",
+    "tags": [
+      "Executive desk",
+      "Bookcase",
+      "Office interior",
+      "Fluted surfaces",
+      "Concealed lighting"
+    ],
+    "workTypes": [
+      "Executive desk"
+    ]
+  },
+  "b1-05": {
+    "title": "Geometric reception counter with linear detailing",
+    "description": "An angled white surface meets horizontal wood-look strips. Vertical lines on the wall behind create an orderly backdrop for a reception area.",
+    "alt": "Geometric reception counter with linear detailing — Reception counter",
+    "subcategory": "Reception counter",
+    "tags": [
+      "Reception counter",
+      "Commercial interior",
+      "Geometric form",
+      "Linear wall panels"
+    ],
+    "workTypes": [
+      "Counter"
+    ]
+  },
+  "b1-06": {
+    "title": "White and wood-look reception with linear light",
+    "description": "A wood-look counter meets a white panel with a sloping edge. Warm light traces the junction, picking out its shape against simple walls and surrounding wood-look finishes.",
+    "alt": "White and wood-look reception with linear light — Reception counter",
+    "subcategory": "Reception counter",
+    "tags": [
+      "Reception desk",
+      "White & wood-look tones",
+      "Linear lighting",
+      "Modern design"
+    ],
+    "workTypes": [
+      "Counter"
+    ]
+  },
+  "b1-07": {
+    "title": "Dark wood-look desk and storage",
+    "description": "An executive desk and matching storage combine dark wood-look surfaces with black detailing. Open shelves, closed cabinets and a glazed section provide places for files and display objects.",
+    "alt": "Dark wood-look desk and storage — Executive office",
+    "subcategory": "Executive office",
+    "tags": [
+      "Executive desk",
+      "Office bookcase",
+      "Filing cabinet",
+      "Glass display",
+      "Dark wood-look tones"
+    ],
+    "workTypes": [
+      "Executive desk"
+    ]
+  },
+  "b1-08": {
+    "title": "Meeting room behind glass partitions",
+    "description": "A large rectangular table, brown chairs and a dark display wall define the meeting area. Black-framed glazing and white ceiling fins give the room a clear architectural rhythm.",
+    "alt": "Meeting room behind glass partitions — Meeting room",
+    "subcategory": "Meeting room",
+    "tags": [
+      "Conference table",
+      "Meeting room",
+      "Glass partition",
+      "Display wall",
+      "Ceiling fins"
+    ],
+    "workTypes": [
+      "Meeting table"
+    ]
+  },
+  "b1-10": {
+    "title": "Open office with an exposed ceiling",
+    "description": "Rows of white desks, drawer units and black chairs fill an open workspace. Exposed services, pendant and linear lights establish an industrial character, while plants provide visual separation.",
+    "alt": "Open office with an exposed ceiling — Open office",
+    "subcategory": "Open office",
+    "tags": [
+      "Office fit-out",
+      "Shared desks",
+      "Industrial style",
+      "Exposed services",
+      "Open layout"
+    ],
+    "workTypes": [
+      "Shared desks"
+    ]
+  },
+  "b1-11": {
+    "title": "Shared workspace with a graphic wall",
+    "description": "Light desk surfaces, dark legs and grey dividers form shared workstations. An exposed dark ceiling and linear lighting sit above a graphic wall with yellow and blue accents.",
+    "alt": "Shared workspace with a graphic wall — Open office",
+    "subcategory": "Open office",
+    "tags": [
+      "Shared workspace",
+      "Desk divider",
+      "Graphic wall",
+      "Open ceiling",
+      "Linear lighting"
+    ],
+    "workTypes": [
+      "Shared desks"
+    ]
+  },
+  "b1-12": {
+    "title": "Minimal office with white desks",
+    "description": "White desks and black chairs are arranged in a bright office with glass partitions. Under-desk drawers, wood-look desk organisers and a small seating area complete the setting.",
+    "alt": "Minimal office with white desks — Open office",
+    "subcategory": "Open office",
+    "tags": [
+      "Minimal office",
+      "Office desk",
+      "Glass partition",
+      "Office drawer unit",
+      "Seating area"
+    ],
+    "workTypes": [
+      "Shared desks"
+    ]
+  },
+  "b1-13": {
+    "title": "Pale green cabinetry with upper glass displays",
+    "description": "Smooth, glossy pale green fronts meet a light worktop and white apron-front sink. Dark-framed upper displays and warm lighting above, below and within the cabinets reveal the layers of the composition.",
+    "alt": "Pale green cabinetry with upper glass displays — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "tags": [
+      "Green cabinetry",
+      "Glass display",
+      "Under-cabinet lighting",
+      "Apron-front sink",
+      "Modern kitchen"
+    ],
+    "workTypes": [
+      "Cabinetry",
+      "Display unit"
+    ]
+  },
+  "b1-14": {
+    "title": "Green and white U-shaped kitchen",
+    "description": "Pale green and white cabinetry wraps around three sides of the kitchen. Light veined surfaces, black appliances, tall cabinets and linear ceiling lighting create a continuous composition.",
+    "alt": "Green and white U-shaped kitchen — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "tags": [
+      "U-shaped kitchen",
+      "Green & white cabinetry",
+      "Integrated appliances",
+      "Stone-look surfaces",
+      "Linear lighting"
+    ],
+    "workTypes": [
+      "Cabinetry"
+    ]
+  },
+  "b1-15": {
+    "title": "Kitchen in warm wood-look tones",
+    "description": "Wood-look lower cabinets sit beneath warm neutral upper units. A light worktop, black integrated appliances and under-cabinet lighting connect with a coordinated dining table and pendant lights.",
+    "alt": "Kitchen in warm wood-look tones — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "tags": [
+      "Wood-look cabinetry",
+      "Warm kitchen palette",
+      "Integrated appliances",
+      "Dining table",
+      "Pendant lighting"
+    ],
+    "workTypes": [
+      "Cabinetry"
+    ]
+  },
+  "b1-16": {
+    "title": "Framed green cabinets and dark glass displays",
+    "description": "A long kitchen combines framed green fronts, black handles and dark-framed glass displays. Light veined surfaces and lighting inside and beneath the cabinets provide a gentle contrast.",
+    "alt": "Framed green cabinets and dark glass displays — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "tags": [
+      "Framed cabinetry",
+      "Shaker style",
+      "Green cabinetry",
+      "Black display unit",
+      "Galley kitchen"
+    ],
+    "workTypes": [
+      "Cabinetry",
+      "Display unit"
+    ]
+  },
+  "b1-17": {
+    "title": "Breakfast counter with a fluted front",
+    "description": "Wood-look upper cabinets meet grey lower units. A breakfast counter with vertical fluting, a pale top and concealed lighting forms the focal point, with illuminated shelves and slim pendants nearby.",
+    "alt": "Breakfast counter with a fluted front — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "tags": [
+      "Breakfast counter",
+      "Fluted front",
+      "Wood-look & grey cabinetry",
+      "Display shelves",
+      "Concealed lighting"
+    ],
+    "workTypes": [
+      "Cabinetry",
+      "Counter"
+    ]
+  },
+  "b2-01": {
+    "title": "Dark wall bookcase with integrated lighting",
+    "description": "Open shelves, lower cabinets and vertical wood-look panels form a wall of storage. Dark tones, fluted detailing and warm shelf lighting bring storage and display together.",
+    "alt": "Dark wall bookcase with integrated lighting — Office bookcases & storage",
+    "subcategory": "Office bookcases & storage",
+    "tags": [
+      "Bookcase",
+      "Office storage",
+      "Open shelves",
+      "Concealed lighting",
+      "Fluted panel"
+    ],
+    "workTypes": [
+      "Bookcase",
+      "Wardrobe & storage"
+    ]
+  },
+  "b2-02": {
+    "title": "Angled view of an illuminated bookcase",
+    "description": "This angled view shows dark open shelving, plain doors and wood-look sections. Warm shelf lighting gives depth to the combination of open display and closed storage.",
+    "alt": "Angled view of an illuminated bookcase — Office bookcases & storage",
+    "subcategory": "Office bookcases & storage",
+    "tags": [
+      "Bookcase",
+      "Office storage",
+      "Shelving",
+      "Interior lighting"
+    ],
+    "workTypes": [
+      "Bookcase",
+      "Wardrobe & storage"
+    ]
+  },
+  "b2-03": {
+    "title": "Black coffee point with linear wall panels",
+    "description": "Black cabinetry, a sink and a coffee machine form a compact drinks area. Vertical wood-look panels and a continuous shelf add warmth to the dark palette.",
+    "alt": "Black coffee point with linear wall panels — Pantry & break area",
+    "subcategory": "Pantry & break area",
+    "tags": [
+      "Coffee point",
+      "Pantry",
+      "Black cabinetry",
+      "Linear wall panels",
+      "Shelf"
+    ],
+    "workTypes": [
+      "Pantry",
+      "Cabinetry"
+    ]
+  },
+  "b2-04": {
+    "title": "White and wood-look reception with concealed light",
+    "description": "An elongated counter combines wood-look panels with a stepped white frame. Concealed light emphasises its horizontal form beneath pendant lights in a minimal setting.",
+    "alt": "White and wood-look reception with concealed light — Reception counter",
+    "subcategory": "Reception counter",
+    "tags": [
+      "Reception counter",
+      "White & wood-look tones",
+      "Concealed lighting",
+      "Office interior"
+    ],
+    "workTypes": [
+      "Counter"
+    ]
+  },
+  "b2-05": {
+    "title": "Navy kitchen with a wood-look island",
+    "description": "Navy cabinets surround an island with wood-look surfaces. Open shelves, black pendants and island seating balance deep colour with a warm-looking texture.",
+    "alt": "Navy kitchen with a wood-look island — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "tags": [
+      "Navy cabinetry",
+      "Kitchen island",
+      "Open shelves",
+      "Breakfast seating",
+      "Pendant light"
+    ],
+    "workTypes": [
+      "Cabinetry"
+    ]
+  },
+  "b2-06": {
+    "title": "Minimal executive desk in a dark room",
+    "description": "A wood-look desk surface, pale detailing and a dark side drawer unit sit against grey walls. A narrow wall shelf and black furniture reinforce the simple geometric lines.",
+    "alt": "Minimal executive desk in a dark room — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "tags": [
+      "Executive desk",
+      "Drawer unit",
+      "Dark interior",
+      "Minimal style"
+    ],
+    "workTypes": [
+      "Executive desk"
+    ]
+  },
+  "b2-07": {
+    "title": "Executive desk with coordinated storage",
+    "description": "A large wood-look desktop meets a dark base and side storage. The bookcase behind combines closed panels and open shelving in the same palette.",
+    "alt": "Executive desk with coordinated storage — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "tags": [
+      "Executive desk",
+      "Office bookcase",
+      "Side table",
+      "Wood-look & grey tones"
+    ],
+    "workTypes": [
+      "Executive desk",
+      "Bookcase"
+    ]
+  },
+  "b2-08": {
+    "title": "Executive room with warm wall panels",
+    "description": "A wood-look desk, pale panels and illuminated display shelves define this office. Continuous wall treatments and concealed ceiling light connect the different elements.",
+    "alt": "Executive room with warm wall panels — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "tags": [
+      "Executive office",
+      "Wall panels",
+      "Display shelves",
+      "Concealed lighting",
+      "Office desk"
+    ],
+    "workTypes": [
+      "Executive desk",
+      "Bookcase"
+    ]
+  },
+  "b2-09": {
+    "title": "Compartmented wardrobe accessory drawer",
+    "description": "A close view shows separate compartments for watches, glasses, belts and jewellery. Wood-look surfaces, gold-toned handles and internal light draw attention to the storage arrangement.",
+    "alt": "Compartmented wardrobe accessory drawer — Wardrobes & dressing areas",
+    "subcategory": "Wardrobes & dressing areas",
+    "tags": [
+      "Wardrobe",
+      "Dressing room",
+      "Drawer organiser",
+      "Accessories",
+      "Construction details"
+    ],
+    "workTypes": [
+      "Wardrobe & storage"
+    ]
+  },
+  "b2-10": {
+    "title": "Bright open office with planter dividers",
+    "description": "Pale workstations sit beneath suspended linear lighting and a grid ceiling. Wood-look storage with integrated planters separates desks from circulation paths.",
+    "alt": "Bright open office with planter dividers — Open office",
+    "subcategory": "Open office",
+    "tags": [
+      "Open office",
+      "Planter divider",
+      "Office storage",
+      "Grid ceiling",
+      "Warm colours"
+    ],
+    "workTypes": [
+      "Shared desks",
+      "Wardrobe & storage"
+    ]
+  },
+  "b2-11": {
+    "title": "Executive desk with a curved base",
+    "description": "A wood-look desktop with rounded corners sits above a dark curved side section. The bookcase behind combines open shelving, glazing and lower cabinets beside a window seating area.",
+    "alt": "Executive desk with a curved base — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "tags": [
+      "Executive desk",
+      "Curved form",
+      "Bookcase",
+      "Side storage",
+      "Seating area"
+    ],
+    "workTypes": [
+      "Executive desk",
+      "Bookcase"
+    ]
+  },
+  "b2-12": {
+    "title": "Linear kitchen within a wood-look frame",
+    "description": "Pale lower units and fluted upper cabinets sit inside a continuous wood-look frame. Concealed lighting, integrated appliances and a narrow display section complete the kitchen wall.",
+    "alt": "Linear kitchen within a wood-look frame — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "tags": [
+      "Linear kitchen",
+      "Fluted cabinetry",
+      "Integrated appliances",
+      "Display unit",
+      "Concealed lighting"
+    ],
+    "workTypes": [
+      "Cabinetry"
+    ]
+  },
+  "b2-13": {
+    "title": "Workspace with a warmly lit wall bookcase",
+    "description": "A simple wood-look desk faces a wall of cabinets and open shelving. Warm shelf lighting, brown and neutral tones and a pale chair create a quiet atmosphere.",
+    "alt": "Workspace with a warmly lit wall bookcase — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "tags": [
+      "Desk",
+      "Wall bookcase",
+      "Wall cabinets",
+      "Warm lighting",
+      "Wood-look interior"
+    ],
+    "workTypes": [
+      "Executive desk",
+      "Bookcase"
+    ]
+  },
+  "b2-14": {
+    "title": "White shared desks with planted dividers",
+    "description": "Rows of white desks and drawer units sit beside grey dividers lined with plants. Exposed ceiling services and suspended linear lights add an industrial character to the orderly layout.",
+    "alt": "White shared desks with planted dividers — Open office",
+    "subcategory": "Open office",
+    "tags": [
+      "Shared desks",
+      "Desktop divider",
+      "Plants",
+      "Office drawer unit",
+      "Industrial style"
+    ],
+    "workTypes": [
+      "Shared desks"
+    ]
+  },
+  "b2-15": {
+    "title": "Office storage with asymmetric shelves",
+    "description": "Closed cabinets, drawers and asymmetric open shelves form a varied storage composition. Grey, wood-look and dark surfaces provide space for files, books and display objects.",
+    "alt": "Office storage with asymmetric shelves — Office bookcases & storage",
+    "subcategory": "Office bookcases & storage",
+    "tags": [
+      "Filing cabinet",
+      "Bookcase",
+      "Drawers",
+      "Asymmetric shelves",
+      "Storage"
+    ],
+    "workTypes": [
+      "Wardrobe & storage"
+    ]
+  },
+  "b2-17": {
+    "title": "Galley kitchen in grey and wood-look tones",
+    "description": "Grey base units sit beneath wood-look upper cabinets and a high storage row. Under-cabinet lighting, a pale veined splashback and track lights illuminate the working surfaces.",
+    "alt": "Galley kitchen in grey and wood-look tones — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "tags": [
+      "Galley kitchen",
+      "Grey cabinetry",
+      "Wood-look & grey combination",
+      "Linear lighting",
+      "Tall cabinetry"
+    ],
+    "workTypes": [
+      "Cabinetry"
+    ]
+  },
+  "b2-18": {
+    "title": "Tall cabinet with an open middle section",
+    "description": "A pale cabinet combines wood-look doors and grey internal shelves. The open central section provides display space, while several open doors reveal the interior arrangement.",
+    "alt": "Tall cabinet with an open middle section — Office bookcases & storage",
+    "subcategory": "Office bookcases & storage",
+    "tags": [
+      "Office storage",
+      "Filing cabinet",
+      "Internal shelving",
+      "Storage"
+    ],
+    "workTypes": [
+      "Wardrobe & storage"
+    ]
+  },
+  "b2-19": {
+    "title": "Office pantry and staff dining area",
+    "description": "White and wood-look cabinets, drinks equipment and round tables form a small dining area. A blue wall, dark ceiling and ring-shaped lights distinguish it from the formal workspace.",
+    "alt": "Office pantry and staff dining area — Pantry & break area",
+    "subcategory": "Pantry & break area",
+    "tags": [
+      "Pantry",
+      "Staff dining",
+      "Cabinetry",
+      "Break area",
+      "Ring light"
+    ],
+    "workTypes": [
+      "Pantry",
+      "Cabinetry"
+    ]
+  }
+}

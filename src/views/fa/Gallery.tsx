@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
+import { publicGalleryItem } from "@/data/gallery";
 import GalleryGrid from "@/components/GalleryGrid";
 import { gallery } from "@/data/gallery";
 import { galleryIntro } from "@/data/site";
 
-export const metadata: Metadata = { title: "گالری فضاها و جزئیات", description: galleryIntro };
 
 export default function GalleryPage() {
   return (
@@ -12,7 +11,7 @@ export default function GalleryPage() {
         <h1>گالری فضاها و جزئیات</h1>
         <p className="lead">{galleryIntro}</p>
       </div>
-      <div style={{ paddingBottom: 80 }}><GalleryGrid items={gallery} /></div>
+      <div style={{ paddingBottom: 80 }}><GalleryGrid items={gallery.map(publicGalleryItem)} /></div>
     </div>
   );
 }
