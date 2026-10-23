@@ -43,3 +43,12 @@ Originals in `~/Downloads/ -N.jpg` (note the leading space) were copied, never m
 - **Phone, WhatsApp, Instagram, service area:** empty in `contact.ts`; the related links/sections are hidden until filled.
 - **Contact form sending:** disabled preview with an explanatory notice. To enable, set `formEndpoint` in `contact.ts` to a URL that accepts a JSON `POST` (`name, phone, projectType, city, message`). Data goes only to that URL, never into the page URL or logs.
 - No domain, structured data, ratings or business address were created.
+
+## Languages
+
+- `/` redirects (307) to `/en`; Persian lives at `/fa`. The browser language never changes this.
+- Old unprefixed paths (`/gallery`, `/services`, `/about`, `/contact`, `/gallery/<slug>`) redirect to `/fa/...`.
+- Pages: `src/app/[locale]/`; per-language views in `src/views/{en,fa}`; English data in `src/data/site-en.ts` and `src/data/gallery-en.json` (keyed by gallery id).
+- English look: `src/app/en.css` (Manrope, local). Persian look: `src/app/fa.css` (Vazirmatn). Keep them separate.
+- Adding a gallery item: also add its English entry to `gallery-en.json`; `npm run build && TEST_BASE_URL=http://localhost:3000 node tests/verify.mjs` (with the server running) checks coverage.
+- Not built: customer accounts/files (needs a backend and auth, outside the current no-backend scope).
