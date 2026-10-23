@@ -77,3 +77,15 @@ npm run dev                            # http://localhost:3000
 
 Saved references (heart button, "Saved" filter, attached to enquiries/projects), previous/next on image pages (arrow keys too), WhatsApp button, Telegram/Instagram/phone from `src/data/contact.ts`, `sitemap.xml`, `robots.txt`, favicon, Open Graph tags (set `NEXT_PUBLIC_SITE_URL` once a real domain exists; it defaults to `http://localhost:3000`).
 Known issue: for unknown URLs Next serves the correct 404 status, but the localized "not found" text is rendered on the client (empty without JavaScript).
+
+## Admin panel (`/en/admin`, `/fa/admin`)
+
+Staff accounts (the `ADMIN_PHONE` one, plus any added under *Team*) sign in at the normal account page and get an **Admin panel** button.
+
+- **Dashboard:** counters (awaiting our reply, unread, in progress, completed, new enquiries), search by name/phone/title, status filter, "awaiting reply only" toggle. Projects waiting for a reply come first; the browser tab title shows `(n)` while any wait. The page refreshes every 8 seconds while visible.
+- **Project workspace:** client contact (call / WhatsApp links), change status (logged in the project history the client also sees), reply to the client, upload/download/delete files, **internal notes** (staff only, never sent to the client), full timeline.
+- **Enquiries:** from the contact form, with call/WhatsApp links and a handled/new toggle.
+- **Clients:** list with project counts; set a new password for a client (signs them out everywhere) since there is no email/SMS reset yet.
+- **Team:** add staff members.
+- Customers see a "New reply" badge on projects with staff activity they have not opened yet.
+- Updates are polling-based (8 s), not push; there is no email/SMS/WhatsApp notification when a client writes, so keep the dashboard open or check it regularly.

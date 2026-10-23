@@ -78,7 +78,8 @@ func (s *server) handleUpload(w http.ResponseWriter, r *http.Request, u user) {
 		fail(w, 500, "server")
 		return
 	}
-	_, _ = s.db.Exec(`UPDATE cases SET updated_at=? WHERE id=?`, now, c.ID)
+	s.logEvent(c.ID, u.ID, "file", name)
+	s.touch(c.ID, u.Role)
 	writeJSON(w, 201, map[string]bool{"ok": true})
 }
 

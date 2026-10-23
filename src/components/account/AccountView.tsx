@@ -81,14 +81,15 @@ function Dashboard({ locale, user, onLogout }: { locale: Locale; user: User; onL
         <p>{t.hello}، <b>{user.name}</b></p>
         <button className="btn ghost" onClick={logout}>{t.logout}</button>
       </div>
+      {isAdmin && <p><Link className="btn" href={`/${locale}/admin`}>{t.adminLink}</Link></p>}
       <h2 className="h2">{isAdmin ? t.allCases : t.myCases}</h2>
       {cases === null ? <p className="lead">{t.loading}</p> : cases.length === 0 ? <p className="lead">{t.noCases}</p> : (
         <ul className="case-list">
           {cases.map(c => (
             <li key={c.id}>
-              <Link href={`/${locale}/account/cases/${c.id}`}>
+              <Link href={`/${locale}/${isAdmin ? "admin" : "account"}/cases/${c.id}`}>
                 <b>{c.title}</b>
-                <span className="status-pill">{(t.statuses as Record<string, string>)[c.status]}</span>
+                <span className="row-top"><span className="status-pill">{(t.statuses as Record<string, string>)[c.status]}</span>{c.unread && <span className="badge new">{t.newReply}</span>}</span>
                 <small>{isAdmin && c.owner ? `${t.owner}: ${c.owner.name} · ` : ""}{t.updated}: {fmtDate(locale, c.updatedAt)}</small>
               </Link>
             </li>

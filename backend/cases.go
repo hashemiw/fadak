@@ -16,16 +16,36 @@ import (
 var statuses = []string{"new", "reviewing", "design", "production", "installation", "done", "closed"}
 
 type caseOut struct {
-	ID          int64    `json:"id"`
-	Title       string   `json:"title"`
-	ProjectType string   `json:"projectType"`
-	City        string   `json:"city"`
-	Description string   `json:"description"`
-	Refs        []string `json:"refs"`
-	Status      string   `json:"status"`
-	CreatedAt   int64    `json:"createdAt"`
-	UpdatedAt   int64    `json:"updatedAt"`
-	Owner       *user    `json:"owner,omitempty"` // only for staff
+	ID            int64    `json:"id"`
+	Title         string   `json:"title"`
+	ProjectType   string   `json:"projectType"`
+	City          string   `json:"city"`
+	Description   string   `json:"description"`
+	Refs          []string `json:"refs"`
+	Status        string   `json:"status"`
+	CreatedAt     int64    `json:"createdAt"`
+	UpdatedAt     int64    `json:"updatedAt"`
+	Owner         *user    `json:"owner,omitempty"` // only for staff
+	LastActorRole string   `json:"lastActorRole"`
+	Unread        bool     `json:"unread"`                  // something new for the viewer since they last opened it
+	AwaitingReply bool     `json:"awaitingReply,omitempty"` // staff only: customer spoke last and the project is open
+	MessageCount  int      `json:"messageCount"`
+	FileCount     int      `json:"fileCount"`
+}
+
+type eventOut struct {
+	ID        int64  `json:"id"`
+	Kind      string `json:"kind"`
+	Detail    string `json:"detail"`
+	ActorRole string `json:"actorRole"`
+	CreatedAt int64  `json:"createdAt"`
+}
+
+type noteOut struct {
+	ID         int64  `json:"id"`
+	AuthorName string `json:"authorName"`
+	Body       string `json:"body"`
+	CreatedAt  int64  `json:"createdAt"`
 }
 
 type messageOut struct {
@@ -45,11 +65,13 @@ type fileOut struct {
 	UploaderID int64  `json:"uploaderId"`
 }
 
-func scanCase(sc interface{ Scan(...any) error }, withOwner bool) (caseOut, error) {
+func scanCase(sc interface{ Scan(...any) error }, withOwner bool, viewerRole string) (caseOut, error) {
 	var c caseOut
 	var refs string
 	var o user
-	dest := []any{&c.ID, &c.Title, &c.ProjectType, &c.City, &c.Description, &refs, &c.Status, &c.CreatedAt, &c.UpdatedAt}
+	var staffSeen, custSeen int64
+	dest := []any{&c.ID, &c.Title, &c.ProjectType, &c.City, &c.Description, &refs, &c.Status, &c.CreatedAt, &c.UpdatedAt,
+		&c.LastActorRole, &staffSeen, &custSeen, &c.MessageCount, &c.FileCount}
 	if withOwner {
 		dest = append(dest, &o.ID, &o.Name, &o.Phone)
 	}
@@ -60,6 +82,12 @@ func scanCase(sc interface{ Scan(...any) error }, withOwner bool) (caseOut, erro
 	if c.Refs == nil {
 		c.Refs = []string{}
 	}
+	if viewerRole == "admin" {
+		c.Unread = c.LastActorRole == "customer" && c.UpdatedAt > staffSeen
+		c.AwaitingReply = c.LastActorRole == "customer" && c.Status != "done" && c.Status != "closed"
+	} else {
+		c.Unread = c.LastActorRole == "admin" && c.UpdatedAt > custSeen
+	}
 	if withOwner {
 		o.Role = "customer"
 		c.Owner = &o
@@ -67,7 +95,18 @@ func scanCase(sc interface{ Scan(...any) error }, withOwner bool) (caseOut, erro
 	return c, nil
 }
 
-const caseCols = `c.id,c.title,c.project_type,c.city,c.description,c.refs,c.status,c.created_at,c.updated_at`
+const caseCols = `c.id,c.title,c.project_type,c.city,c.description,c.refs,c.status,c.created_at,c.updated_at,
+	c.last_actor_role,c.staff_seen_at,c.customer_seen_at,
+	(SELECT COUNT(*) FROM messages WHERE case_id=c.id),(SELECT COUNT(*) FROM files WHERE case_id=c.id)`
+
+// touch records activity on a case: it bumps updated_at and marks who acted last, which drives the unread/awaiting flags.
+func (s *server) touch(caseID int64, role string) {
+	_, _ = s.db.Exec(`UPDATE cases SET updated_at=?, last_actor_role=? WHERE id=?`, time.Now().Unix(), role, caseID)
+}
+
+func (s *server) logEvent(caseID, actorID int64, kind, detail string) {
+	_, _ = s.db.Exec(`INSERT INTO case_events(case_id,actor_id,kind,detail,created_at) VALUES(?,?,?,?,?)`, caseID, actorID, kind, detail, time.Now().Unix())
+}
 
 func (s *server) handleListCases(w http.ResponseWriter, _ *http.Request, u user) {
 	q, args, owner := `SELECT `+caseCols+` FROM cases c WHERE c.user_id=? ORDER BY c.updated_at DESC`, []any{u.ID}, false
@@ -82,7 +121,7 @@ func (s *server) handleListCases(w http.ResponseWriter, _ *http.Request, u user)
 	defer rows.Close()
 	out := []caseOut{}
 	for rows.Next() {
-		c, err := scanCase(rows, owner)
+		c, err := scanCase(rows, owner, u.Role)
 		if err != nil {
 			fail(w, 500, "server")
 			return
@@ -114,6 +153,7 @@ func (s *server) handleCreateCase(w http.ResponseWriter, r *http.Request, u user
 		return
 	}
 	id, _ := res.LastInsertId()
+	s.logEvent(id, u.ID, "created", "")
 	writeJSON(w, 201, map[string]int64{"id": id})
 }
 
@@ -124,7 +164,7 @@ func (s *server) loadCase(w http.ResponseWriter, r *http.Request, u user) (caseO
 		fail(w, 404, "not_found")
 		return caseOut{}, false
 	}
-	c, err := scanCase(s.db.QueryRow(`SELECT `+caseCols+`,u.id,u.name,u.phone FROM cases c JOIN users u ON u.id=c.user_id WHERE c.id=?`, id), true)
+	c, err := scanCase(s.db.QueryRow(`SELECT `+caseCols+`,u.id,u.name,u.phone FROM cases c JOIN users u ON u.id=c.user_id WHERE c.id=?`, id), true, u.Role)
 	if err != nil || (u.Role != "admin" && c.Owner.ID != u.ID) {
 		fail(w, 404, "not_found")
 		return caseOut{}, false
@@ -166,7 +206,36 @@ func (s *server) handleGetCase(w http.ResponseWriter, r *http.Request, u user) {
 		}
 	}
 	rows.Close()
-	writeJSON(w, 200, map[string]any{"case": c, "messages": msgs, "files": files})
+	events := []eventOut{}
+	rows, err = s.db.Query(`SELECT e.id,e.kind,e.detail,u.role,e.created_at FROM case_events e JOIN users u ON u.id=e.actor_id WHERE e.case_id=? ORDER BY e.id`, c.ID)
+	if err == nil {
+		for rows.Next() {
+			var e eventOut
+			if rows.Scan(&e.ID, &e.Kind, &e.Detail, &e.ActorRole, &e.CreatedAt) == nil {
+				events = append(events, e)
+			}
+		}
+		rows.Close()
+	}
+	out := map[string]any{"case": c, "messages": msgs, "files": files, "events": events}
+	if u.Role == "admin" {
+		notes := []noteOut{}
+		rows, err = s.db.Query(`SELECT n.id,u.name,n.body,n.created_at FROM case_notes n JOIN users u ON u.id=n.author_id WHERE n.case_id=? ORDER BY n.id`, c.ID)
+		if err == nil {
+			for rows.Next() {
+				var n noteOut
+				if rows.Scan(&n.ID, &n.AuthorName, &n.Body, &n.CreatedAt) == nil {
+					notes = append(notes, n)
+				}
+			}
+			rows.Close()
+		}
+		out["notes"] = notes
+		_, _ = s.db.Exec(`UPDATE cases SET staff_seen_at=? WHERE id=?`, time.Now().Unix(), c.ID)
+	} else {
+		_, _ = s.db.Exec(`UPDATE cases SET customer_seen_at=? WHERE id=?`, time.Now().Unix(), c.ID)
+	}
+	writeJSON(w, 200, out)
 }
 
 func (s *server) handleAddMessage(w http.ResponseWriter, r *http.Request, u user) {
@@ -183,16 +252,15 @@ func (s *server) handleAddMessage(w http.ResponseWriter, r *http.Request, u user
 		fail(w, 400, "invalid")
 		return
 	}
-	now := time.Now().Unix()
-	if _, err := s.db.Exec(`INSERT INTO messages(case_id,author_id,body,created_at) VALUES(?,?,?,?)`, c.ID, u.ID, in.Body, now); err != nil {
+	if _, err := s.db.Exec(`INSERT INTO messages(case_id,author_id,body,created_at) VALUES(?,?,?,?)`, c.ID, u.ID, in.Body, time.Now().Unix()); err != nil {
 		fail(w, 500, "server")
 		return
 	}
-	_, _ = s.db.Exec(`UPDATE cases SET updated_at=? WHERE id=?`, now, c.ID)
+	s.touch(c.ID, u.Role)
 	writeJSON(w, 201, map[string]bool{"ok": true})
 }
 
-func (s *server) handleSetStatus(w http.ResponseWriter, r *http.Request, _ user) {
+func (s *server) handleSetStatus(w http.ResponseWriter, r *http.Request, u user) {
 	var in struct{ Status string }
 	if !decode(w, r, &in) {
 		return
@@ -201,10 +269,16 @@ func (s *server) handleSetStatus(w http.ResponseWriter, r *http.Request, _ user)
 		fail(w, 400, "invalid_status")
 		return
 	}
-	res, err := s.db.Exec(`UPDATE cases SET status=?, updated_at=? WHERE id=?`, in.Status, time.Now().Unix(), r.PathValue("id"))
-	if n, _ := res.RowsAffected(); err != nil || n == 0 {
+	id, _ := strconv.ParseInt(r.PathValue("id"), 10, 64)
+	var old string
+	if s.db.QueryRow(`SELECT status FROM cases WHERE id=?`, id).Scan(&old) != nil {
 		fail(w, 404, "not_found")
 		return
+	}
+	if old != in.Status {
+		_, _ = s.db.Exec(`UPDATE cases SET status=? WHERE id=?`, in.Status, id)
+		s.logEvent(id, u.ID, "status", old+">"+in.Status)
+		s.touch(id, "admin")
 	}
 	writeJSON(w, 200, map[string]bool{"ok": true})
 }
@@ -266,7 +340,7 @@ func (s *server) handleInquiry(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *server) handleListInquiries(w http.ResponseWriter, _ *http.Request, _ user) {
-	rows, err := s.db.Query(`SELECT id,name,phone,project_type,city,message,refs,locale,created_at FROM inquiries ORDER BY id DESC LIMIT 500`)
+	rows, err := s.db.Query(`SELECT id,name,phone,project_type,city,message,refs,locale,created_at,handled FROM inquiries ORDER BY id DESC LIMIT 500`)
 	if err != nil {
 		fail(w, 500, "server")
 		return
@@ -277,12 +351,13 @@ func (s *server) handleListInquiries(w http.ResponseWriter, _ *http.Request, _ u
 		Name, Phone, ProjectType, City, Message, Locale string
 		Refs                                            []string `json:"refs"`
 		CreatedAt                                       int64    `json:"createdAt"`
+		Handled                                         bool     `json:"handled"`
 	}
 	out := []inq{}
 	for rows.Next() {
 		var q inq
 		var refs string
-		if err := rows.Scan(&q.ID, &q.Name, &q.Phone, &q.ProjectType, &q.City, &q.Message, &refs, &q.Locale, &q.CreatedAt); err != nil && !errors.Is(err, sql.ErrNoRows) {
+		if err := rows.Scan(&q.ID, &q.Name, &q.Phone, &q.ProjectType, &q.City, &q.Message, &refs, &q.Locale, &q.CreatedAt, &q.Handled); err != nil && !errors.Is(err, sql.ErrNoRows) {
 			continue
 		}
 		_ = json.Unmarshal([]byte(refs), &q.Refs)

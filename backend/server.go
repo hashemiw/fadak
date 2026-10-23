@@ -80,6 +80,14 @@ func (s *server) routes() http.Handler {
 	m.HandleFunc("DELETE /api/files/{id}", s.auth(s.handleDeleteFile))
 	m.HandleFunc("PATCH /api/admin/cases/{id}", s.auth(s.admin(s.handleSetStatus)))
 	m.HandleFunc("GET /api/admin/inquiries", s.auth(s.admin(s.handleListInquiries)))
+	m.HandleFunc("PATCH /api/admin/inquiries/{id}", s.auth(s.admin(s.handleInquiryHandled)))
+	m.HandleFunc("GET /api/admin/stats", s.auth(s.admin(s.handleStats)))
+	m.HandleFunc("GET /api/admin/customers", s.auth(s.admin(s.handleCustomers)))
+	m.HandleFunc("POST /api/admin/users/{id}/password", s.auth(s.admin(s.handleResetPassword)))
+	m.HandleFunc("GET /api/admin/staff", s.auth(s.admin(s.handleListStaff)))
+	m.HandleFunc("POST /api/admin/staff", s.auth(s.admin(s.handleCreateStaff)))
+	m.HandleFunc("POST /api/admin/cases/{id}/notes", s.auth(s.admin(s.handleAddNote)))
+	m.HandleFunc("DELETE /api/admin/notes/{id}", s.auth(s.admin(s.handleDeleteNote)))
 	return s.secure(m)
 }
 

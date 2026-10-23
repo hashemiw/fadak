@@ -9,6 +9,7 @@ import (
 	"net/http/httptest"
 	"strings"
 	"testing"
+	"time"
 )
 
 const origin = "http://localhost:3000"
@@ -173,3 +174,82 @@ func TestFiles(t *testing.T) {
 }
 
 func itoa(n int64) string { b, _ := json.Marshal(n); return string(b) }
+
+func TestAdminWorkflow(t *testing.T) {
+	_, h := testServer(t)
+	cust, admin := &client{t: t, h: h}, &client{t: t, h: h}
+	cust.mustStatus(cust.do("POST", "/api/auth/register", map[string]string{"name": "C", "phone": "09121111111", "password": "password1"}), 201)
+	admin.mustStatus(admin.do("POST", "/api/auth/login", map[string]string{"phone": "09120000000", "password": "adminpass1"}), 200)
+
+	var created map[string]int64
+	_ = json.Unmarshal(cust.do("POST", "/api/cases", map[string]any{"title": "Desk"}).Body.Bytes(), &created)
+	id := itoa(created["id"])
+	caseOf := func(c *client) caseOut {
+		var list []caseOut
+		_ = json.Unmarshal(c.do("GET", "/api/cases", nil).Body.Bytes(), &list)
+		if len(list) != 1 {
+			t.Fatalf("expected one case, got %d", len(list))
+		}
+		return list[0]
+	}
+
+	// a new customer project is unread + awaiting for staff, not unread for the customer
+	if c := caseOf(admin); !c.Unread || !c.AwaitingReply {
+		t.Fatalf("staff view: %+v", c)
+	}
+	if c := caseOf(cust); c.Unread {
+		t.Fatalf("customer should not see own project as unread: %+v", c)
+	}
+	admin.mustStatus(admin.do("GET", "/api/cases/"+id, nil), 200) // staff opens it
+	time.Sleep(1100 * time.Millisecond)                           // timestamps are in seconds
+	if c := caseOf(admin); c.Unread || !c.AwaitingReply {
+		t.Fatalf("after opening: %+v", c)
+	}
+
+	// staff reply + status change: customer sees it as unread until they open it
+	admin.mustStatus(admin.do("POST", "/api/cases/"+id+"/messages", map[string]string{"body": "Hello"}), 201)
+	admin.mustStatus(admin.do("PATCH", "/api/admin/cases/"+id, map[string]string{"status": "reviewing"}), 200)
+	if c := caseOf(cust); !c.Unread || c.Status != "reviewing" || c.MessageCount != 1 {
+		t.Fatalf("customer view: %+v", c)
+	}
+	if c := caseOf(admin); c.AwaitingReply {
+		t.Fatalf("staff replied, should not be awaiting: %+v", c)
+	}
+	time.Sleep(1100 * time.Millisecond)
+	cust.mustStatus(cust.do("GET", "/api/cases/"+id, nil), 200)
+	if c := caseOf(cust); c.Unread {
+		t.Fatalf("customer opened it: %+v", c)
+	}
+
+	// internal notes stay private to staff
+	admin.mustStatus(admin.do("POST", "/api/admin/cases/"+id+"/notes", map[string]string{"body": "budget is tight"}), 201)
+	cust.mustStatus(cust.do("POST", "/api/admin/cases/"+id+"/notes", map[string]string{"body": "x"}), 403)
+	var detail map[string]json.RawMessage
+	_ = json.Unmarshal(cust.do("GET", "/api/cases/"+id, nil).Body.Bytes(), &detail)
+	if _, leaked := detail["notes"]; leaked || strings.Contains(string(detail["messages"]), "budget") {
+		t.Fatal("internal note leaked to customer")
+	}
+	_ = json.Unmarshal(admin.do("GET", "/api/cases/"+id, nil).Body.Bytes(), &detail)
+	if !strings.Contains(string(detail["notes"]), "budget is tight") || !strings.Contains(string(detail["events"]), "reviewing") {
+		t.Fatalf("staff detail missing notes/events: %s", detail)
+	}
+
+	// stats, customers, staff-only
+	admin.mustStatus(admin.do("GET", "/api/admin/stats", nil), 200)
+	admin.mustStatus(admin.do("GET", "/api/admin/customers", nil), 200)
+	cust.mustStatus(cust.do("GET", "/api/admin/stats", nil), 403)
+	cust.mustStatus(cust.do("POST", "/api/admin/staff", map[string]string{"name": "X", "phone": "09125556666", "password": "password1"}), 403)
+	admin.mustStatus(admin.do("POST", "/api/admin/staff", map[string]string{"name": "Staff2", "phone": "09125556666", "password": "password1"}), 201)
+
+	// password reset signs the customer out and the new password works
+	var me user
+	_ = json.Unmarshal(cust.do("GET", "/api/me", nil).Body.Bytes(), &me)
+	admin.mustStatus(admin.do("POST", "/api/admin/users/"+itoa(me.ID)+"/password", map[string]string{"password": "newpassword9"}), 200)
+	cust.mustStatus(cust.do("GET", "/api/me", nil), 401)
+	cust.mustStatus(cust.do("POST", "/api/auth/login", map[string]string{"phone": "09121111111", "password": "newpassword9"}), 200)
+	admin.mustStatus(admin.do("POST", "/api/admin/users/1/password", map[string]string{"password": "newpassword9"}), 404) // staff accounts are not resettable here
+
+	// enquiries can be marked handled
+	cust.mustStatus(cust.do("POST", "/api/inquiries", map[string]string{"name": "Q", "phone": "09123334455"}), 201)
+	admin.mustStatus(admin.do("PATCH", "/api/admin/inquiries/1", map[string]bool{"handled": true}), 200)
+}
