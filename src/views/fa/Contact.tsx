@@ -4,9 +4,10 @@ import { contact } from "@/data/contact";
 
 export default function ContactPage() {
   const links = [
-    contact.phone && { k: "تلفن", v: <a className="ltr" href={`tel:${contact.phone}`}>{contact.phone}</a> },
+    contact.phone && { k: "تلفن", v: <a className="ltr" href={`tel:${contact.phone}`}>{contact.phoneDisplay}</a> },
     contact.whatsapp && { k: "واتساپ", v: <a className="link" href={`https://wa.me/${contact.whatsapp}`} rel="noopener">گفت‌وگو در واتساپ</a> },
     contact.instagram && { k: "اینستاگرام", v: <a className="ltr" href={`https://instagram.com/${contact.instagram}`} rel="noopener">@{contact.instagram}</a> },
+    contact.telegram && { k: "تلگرام", v: <a className="ltr" href={`https://t.me/${contact.telegram}`} rel="noopener">@{contact.telegram}</a> },
     contact.serviceArea && { k: "محدوده فعالیت", v: contact.serviceArea },
   ].filter(Boolean) as { k: string; v: React.ReactNode }[];
 

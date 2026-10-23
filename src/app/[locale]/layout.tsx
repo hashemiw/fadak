@@ -7,12 +7,14 @@ import HeaderEn from "@/components/en/Header";
 import FooterEn from "@/components/en/Footer";
 import { brand } from "@/data/site";
 import { isLocale, locales } from "@/lib/i18n";
+import { contact } from "@/data/contact";
+import { siteUrl } from "@/lib/site";
 
 export const generateStaticParams = () => locales.map(locale => ({ locale }));
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const name = locale === "fa" ? brand.name : brand.nameEn;
-  return { title: { default: name, template: `%s | ${name}` } };
+  return { metadataBase: new URL(siteUrl), title: { default: name, template: `%s | ${name}` } };
 }
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -25,6 +27,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     </> : <link rel="preload" href="/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />}</head>
     <body><a className="skip" href="#main">{fa ? "پرش به محتوا" : "Skip to content"}</a>
       {fa ? <HeaderFa /> : <HeaderEn />}<main id="main">{children}</main>{fa ? <FooterFa /> : <FooterEn />}
+      {contact.whatsapp && <a className="wa-float" href={`https://wa.me/${contact.whatsapp}`} rel="noopener">{fa ? "واتساپ" : "WhatsApp"}</a>}
     </body>
   </html>;
 }

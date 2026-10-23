@@ -5,10 +5,12 @@ export const serviceAreas = [
 export const serviceAreaLabel = (locale: "en" | "fa") => serviceAreas.map(area => area[locale]).join(locale === "fa" ? "، " : ", ");
 // Fill in real values to enable the matching buttons/links. Empty = hidden.
 export const contact = {
-  phone: "", // e.g. "09120000000"
-  whatsapp: "", // digits with country code, e.g. "989120000000"
-  instagram: "", // username without @
+  phone: "+989199294498",
+  phoneDisplay: "+98 919 929 4498",
+  whatsapp: "989199294498",
+  instagram: "fadakatelier",
+  telegram: "fadakatelier",
   serviceArea: serviceAreaLabel("fa"), // e.g. "تهران و حومه"
-  // Endpoint that accepts a JSON POST of the form. Empty = form stays a disabled preview.
-  formEndpoint: "",
+  // Same-origin path proxied to the Go backend (see next.config.mjs). Empty = form stays a disabled preview.
+  formEndpoint: "/api/inquiries",
 };

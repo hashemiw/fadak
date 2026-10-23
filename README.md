@@ -52,3 +52,28 @@ Originals in `~/Downloads/ -N.jpg` (note the leading space) were copied, never m
 - English look: `src/app/en.css` (Manrope, local). Persian look: `src/app/fa.css` (Vazirmatn). Keep them separate.
 - Adding a gallery item: also add its English entry to `gallery-en.json`; `npm run build && TEST_BASE_URL=http://localhost:3000 node tests/verify.mjs` (with the server running) checks coverage.
 - Not built: customer accounts/files (needs a backend and auth, outside the current no-backend scope).
+
+## Accounts, projects and enquiries (Go backend)
+
+`backend/` is a standalone Go service (stdlib `net/http` + SQLite via `modernc.org/sqlite`, no CGO). The Next.js site proxies `/api/*` to it (`next.config.mjs`, `BACKEND_URL`, default `http://127.0.0.1:8080`), so cookies stay same-origin.
+
+Run both (two terminals):
+
+```bash
+cp backend/.env.example backend/.env   # set ADMIN_PHONE / ADMIN_PASSWORD (staff login), never commit it
+npm run backend                        # http://127.0.0.1:8080
+npm run dev                            # http://localhost:3000
+```
+
+- **Customers:** sign up with name + phone + password at `/en/account` or `/fa/account` (one account for both languages), open a project, exchange messages, upload private files (JPG/PNG/WebP/PDF, 10 MB, 20 per project), delete their account and all data.
+- **Staff:** the account created from `ADMIN_PHONE`/`ADMIN_PASSWORD` sees all projects, replies, sets the status, downloads files and sees public enquiries. Restarting the backend resets that password to the configured one (this is also how customer passwords are "reset": there is no email/SMS yet).
+- **Enquiries:** the contact form posts to `/api/inquiries`; saved gallery references (favourites, stored only in the visitor's browser) are attached when they tick the box.
+- **Data:** `backend/data/` (SQLite + `uploads/`, git-ignored). Files are only served through authenticated, owner/staff-checked downloads with `nosniff` and `attachment`.
+- **Security basics:** bcrypt, random session tokens (only hashes stored), HttpOnly SameSite=Lax cookie (`COOKIE_SECURE=true` behind HTTPS), Origin check on every state-changing request, rate limits on sign-up/sign-in/enquiries, file type sniffed from content. Set `ALLOWED_ORIGINS` to the real site origin(s) when deploying.
+- **Not built:** email/SMS notifications or verification, password reset, an admin screen beyond the project list. Customer text and files are never translated or sent to third parties.
+- Tests: `cd backend && go test ./...`; site: build, start, then `TEST_BASE_URL=http://localhost:3000 npm run test:site`.
+
+## Other additions
+
+Saved references (heart button, "Saved" filter, attached to enquiries/projects), previous/next on image pages (arrow keys too), WhatsApp button, Telegram/Instagram/phone from `src/data/contact.ts`, `sitemap.xml`, `robots.txt`, favicon, Open Graph tags (set `NEXT_PUBLIC_SITE_URL` once a real domain exists; it defaults to `http://localhost:3000`).
+Known issue: for unknown URLs Next serves the correct 404 status, but the localized "not found" text is rendered on the client (empty without JavaScript).

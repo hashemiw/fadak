@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { projectTypes } from "@/data/site";
 import { projectTypes as englishTypes } from "@/data/site-en";
 import type { Locale } from "@/lib/i18n";
+import { useFavorites } from "@/lib/favorites";
 
 const toLatin = (s: string) => s.replace(/[۰-۹]/g, d => String(d.charCodeAt(0) - 0x06f0)).replace(/[٠-٩]/g, d => String(d.charCodeAt(0) - 0x0660));
 export function normalizePhone(raw: string) {
@@ -22,6 +23,8 @@ export default function ContactForm({ endpoint, locale = "fa" }: { endpoint: str
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "fail">("idle");
   const [storageError, setStorageError] = useState(false);
+  const favs = useFavorites();
+  const [attach, setAttach] = useState(true);
   const form = useRef<HTMLFormElement>(null);
   const current = useRef({ values, status });
   current.current = { values, status };
@@ -62,7 +65,7 @@ export default function ContactForm({ endpoint, locale = "fa" }: { endpoint: str
     setStatus("sending");
     try {
       const response = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, name, phone }) });
+        body: JSON.stringify({ ...values, name, phone, locale, refs: attach ? favs : [] }) });
       if (!response.ok) throw new Error("Request failed");
       setStatus("done"); setValues(empty);
       try { sessionStorage.removeItem(draftKey); } catch { /* No stored transfer. */ }
@@ -92,6 +95,7 @@ export default function ContactForm({ endpoint, locale = "fa" }: { endpoint: str
       <label htmlFor="message"><span>{t("توضیح درخواست", "Your enquiry")} <small>{optional}</small></span>
         <textarea id="message" name="message" value={values.message} onChange={e => change("message", e.target.value)} />
       </label>
+      {favs.length > 0 && <label className="check"><input type="checkbox" checked={attach} onChange={e => setAttach(e.target.checked)} /> <span>{t(`ارسال ${favs.length.toLocaleString("fa")} تصویر ذخیره‌شده به‌عنوان مرجع`, `Include my ${favs.length} saved reference${favs.length > 1 ? "s" : ""}`)}</span></label>}
       <button className="btn" type="submit">{status === "sending" ? t("در حال ارسال…", "Sending…") : t("ارسال درخواست", "Send enquiry")}</button>
     </fieldset>
     <div aria-live="polite">

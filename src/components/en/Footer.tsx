@@ -15,8 +15,9 @@ export default function Footer() {
         </nav>
         {(contact.phone || contact.instagram || contact.serviceArea) && (
           <div>
-            {contact.phone && <p><a className="ltr" href={`tel:${contact.phone}`}>{contact.phone}</a></p>}
+            {contact.phone && <p><a className="ltr" href={`tel:${contact.phone}`}>{contact.phoneDisplay}</a></p>}
             {contact.instagram && <p><a className="ltr" href={`https://instagram.com/${contact.instagram}`} rel="noopener">@{contact.instagram}</a></p>}
+            {contact.telegram && <p><a className="ltr" href={`https://t.me/${contact.telegram}`} rel="noopener">Telegram @{contact.telegram}</a></p>}
             {contact.serviceArea && <p>{serviceAreaLabel("en")}</p>}
           </div>
         )}

@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Card from "@/components/Card";
+import PrevNext from "@/components/PrevNext";
+import FavoriteButton from "@/components/FavoriteButton";
 import Lightbox from "@/components/Lightbox";
 import { categories, gallery, getItem } from "@/data/gallery";
 
@@ -12,6 +14,8 @@ type Props = { params: Promise<{ slug: string }> };
 export default async function ItemPage({ params }: Props) {
   const item = getItem((await params).slug);
   if (!item) notFound();
+  const at = gallery.findIndex((g) => g.id === item.id);
+  const near = (i: number) => (gallery[i] ? { slug: gallery[i].slug, title: gallery[i].title } : null);
   const related = gallery.filter((g) => g.category === item.category && g.id !== item.id).slice(0, 4);
 
   return (
@@ -37,7 +41,8 @@ export default async function ItemPage({ params }: Props) {
           )}
           {item.watermark && <p className="note">روی این تصویر نشان یا نوشته‌ای از منبع دیگر دیده می‌شود؛ تصویر مرجع است و به آتلیه فدک نسبت داده نمی‌شود.</p>}
           {item.kind === "reference-3d" && <p className="note">بر اساس نام فایل منبع، این تصویر مدل سه‌بعدی است، نه عکس اجرای واقعی.</p>}
-          <div className="actions"><Link href="/fa/contact" className="btn">درخواست مشاوره</Link></div>
+          <div className="actions" style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}><Link href="/fa/contact" className="btn">درخواست مشاوره</Link><FavoriteButton id={item.id} locale="fa" /></div>
+          <PrevNext locale="fa" prev={near(at - 1)} next={near(at + 1)} />
         </div>
       </article>
       {related.length > 0 && (

@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props) {
   if (!isLocale(locale)) notFound();
   const item = locale === "fa" ? getItem(slug) : getEnglishItem(slug);
   if (!item) notFound();
-  return localizedMetadata(locale, `/gallery/${slug}`, item.title, item.description.slice(0, 160));
+  return localizedMetadata(locale, `/gallery/${slug}`, item.title, item.description.slice(0, 160), item.imagePath);
 }
 export default async function Page({ params }: Props) {
   const { locale } = await params;

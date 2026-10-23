@@ -1,16 +1,19 @@
 "use client";
 import { useState } from "react";
+import { useFavorites } from "@/lib/favorites";
 import Card from "./Card";
 import { categories, type Category, type PublicGalleryItem } from "@/data/gallery-en";
 
 export default function GalleryGrid({ items }: { items: PublicGalleryItem[] }) {
   const [cat, setCat] = useState<Category | "all">("all");
   const [type, setType] = useState("all");
+  const favs = useFavorites();
+  const [savedOnly, setSavedOnly] = useState(false);
 
   // Only filters that have content are offered.
   const cats = (Object.keys(categories) as Category[]).filter((c) => items.some((i) => i.category === c));
   const types = [...new Set(items.flatMap((i) => i.workTypes))];
-  const shown = items.filter((i) => (cat === "all" || i.category === cat) && (type === "all" || i.workTypes.includes(type)));
+  const shown = items.filter((i) => (cat === "all" || i.category === cat) && (type === "all" || i.workTypes.includes(type)) && (!savedOnly || favs.includes(i.id)));
 
   const chip = (label: string, active: boolean, on: () => void) => (
     <button key={label} className="chip" aria-pressed={active} onClick={on}>{label}</button>
@@ -23,6 +26,7 @@ export default function GalleryGrid({ items }: { items: PublicGalleryItem[] }) {
           <span>Category</span>
           {chip("All", cat === "all", () => setCat("all"))}
           {cats.map((c) => chip(categories[c], cat === c, () => setCat(c)))}
+          {chip(`Saved (${favs.length.toLocaleString("en")})`, savedOnly, () => setSavedOnly(v => !v))}
         </div>
         <div className="filters" role="group" aria-label="Filter by type">
           <span>Type</span>

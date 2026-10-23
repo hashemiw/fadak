@@ -29,6 +29,7 @@ export default function Header() {
           {nav.map((n) => (
             <Link key={n.href} href={`/en${n.href === "/" ? "" : n.href}`} aria-current={current(n.href) ? "page" : undefined}>{n.label}</Link>
           ))}
+          <Link href="/en/account" aria-current={path.startsWith("/account") ? "page" : undefined}>Account</Link>
           <Link href="/en/contact" className="btn cta-m">Start a conversation</Link>
         </nav>
         <Link href="/en/contact" className="btn cta">Start a conversation</Link>

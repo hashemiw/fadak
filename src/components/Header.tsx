@@ -29,6 +29,7 @@ export default function Header() {
           {nav.map((n) => (
             <Link key={n.href} href={`/fa${n.href === "/" ? "" : n.href}`} aria-current={current(n.href) ? "page" : undefined}>{n.label}</Link>
           ))}
+          <Link href="/fa/account" aria-current={path.startsWith("/account") ? "page" : undefined}>حساب کاربری</Link>
           <Link href="/fa/contact" className="btn cta-m">درخواست مشاوره</Link>
         </nav>
         <Link href="/fa/contact" className="btn cta">درخواست مشاوره</Link>

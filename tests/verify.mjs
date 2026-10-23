@@ -44,7 +44,7 @@ if (base) {
     for (const route of routes) {
       const response = await fetch(base + '/' + locale + route);
       assert.equal(response.status, 200, locale + route);
-      const html = await response.text();
+      const html = (await response.text()).replaceAll('http://localhost:3000', ''); // metadataBase makes alternates absolute
       assert(html.includes(`lang="${locale}" dir="${locale === 'fa' ? 'rtl' : 'ltr'}"`), locale + route);
       assert(html.includes(`hrefLang="${locale === 'fa' ? 'en' : 'fa'}"`) || html.includes(`hrefLang="${locale === 'fa' ? 'en' : 'fa'}"`.toLowerCase()));
       for (const lang of ['en', 'fa']) assert(html.includes(`hrefLang="${lang}" href="/${lang}${route}"`) || html.includes(`hreflang="${lang}" href="/${lang}${route}"`), 'alternate '+locale+route);

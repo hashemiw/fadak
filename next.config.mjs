@@ -1,6 +1,8 @@
 const removed = "bright-office-group-desks-dividers";
+const backend = process.env.BACKEND_URL || "http://127.0.0.1:8080";
 const nextConfig = {
-  experimental: { globalNotFound: true },
+  experimental: { globalNotFound: true, proxyClientMaxBodySize: "12mb" },
+  async rewrites() { return [{ source: "/api/:path*", destination: `${backend}/api/:path*` }]; },
   async redirects() {
     return [
       { source: "/", destination: "/en", permanent: false },

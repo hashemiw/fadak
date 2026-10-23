@@ -3,6 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import Card from "@/components/en/Card";
 import Lightbox from "@/components/en/Lightbox";
+import PrevNext from "@/components/PrevNext";
+import FavoriteButton from "@/components/FavoriteButton";
 import { categories, gallery, getItem } from "@/data/gallery-en";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -12,6 +14,8 @@ type Props = { params: Promise<{ slug: string }> };
 export default async function ItemPage({ params }: Props) {
   const item = getItem((await params).slug);
   if (!item) notFound();
+  const at = gallery.findIndex((g) => g.id === item.id);
+  const near = (i: number) => (gallery[i] ? { slug: gallery[i].slug, title: gallery[i].title } : null);
   const related = gallery.filter((g) => g.category === item.category && g.id !== item.id).slice(0, 4);
 
   return (
@@ -37,7 +41,8 @@ export default async function ItemPage({ params }: Props) {
           )}
           {item.watermark && <p className="note">This reference image carries a mark or text from another source. It is not attributed to Fadak Atelier.</p>}
           {item.kind === "reference-3d" && <p className="note">The source filename identifies this as a 3D model, rather than a photograph of completed work.</p>}
-          <div className="actions"><Link href="/en/contact" className="btn">Start a conversation</Link></div>
+          <div className="actions" style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}><Link href="/en/contact" className="btn">Start a conversation</Link><FavoriteButton id={item.id} locale="en" /></div>
+          <PrevNext locale="en" prev={near(at - 1)} next={near(at + 1)} />
         </div>
       </article>
       {related.length > 0 && (
