@@ -9,7 +9,7 @@ export default function Card({ item, sizes, priority }: { item: PublicGalleryIte
     <Link href={`/fa/gallery/${item.slug}`} className="card-link">
       <Image src={item.imagePath} alt={item.alt} width={item.width} height={item.height} sizes={sizes} priority={priority} />
       <h3>{item.title}</h3>
-      <small>{categories[item.category]} · {item.subcategory}</small>
+      <small>{[categories[item.category], item.subcategory].filter(Boolean).join(" · ")}</small>
     </Link>
     <FavoriteButton id={item.id} locale="fa" />
     </div>

@@ -1,0 +1,1840 @@
+{
+ "gallery": [
+  {
+   "id": "b1-02",
+   "slug": "decorative-cabinet-glass-display",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -2.jpg",
+   "imagePath": "/assets/gallery/img-02.jpg",
+   "width": 736,
+   "height": 1308,
+   "category": "decor",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کابینت دکوراتیو روشن با ویترین شیشه‌ای",
+    "description": "ترکیب کابینت‌های روشن با درهای ساده، ویترین شیشه‌ای با قاب تیره و قفسه‌های باز. نورپردازی خطی گرم، سطح میانی با ظاهر چوب و گوشه‌های منحنی، به این مجموعه یکپارچه جلوه‌ای آرام و مدرن داده‌اند.",
+    "alt": "کابینت دکوراتیو روشن با ویترین شیشه‌ای — کابینت و ویترین دکوراتیو",
+    "subcategory": "کابینت و ویترین دکوراتیو",
+    "workTypes": [
+     "کابینت",
+     "ویترین"
+    ],
+    "tags": [
+     "کابینت دکوراتیو",
+     "ویترین",
+     "قفسه باز",
+     "فرم منحنی",
+     "نور مخفی"
+    ]
+   },
+   "en": {
+    "title": "Light cabinetry with a glass display",
+    "description": "Pale, plain-front cabinets sit alongside a dark-framed glass display and open shelves. Warm linear lighting, a wood-look central surface and curved edges give the composition a calm, continuous feel.",
+    "alt": "Light cabinetry with a glass display — Decorative cabinetry & display",
+    "subcategory": "Decorative cabinetry & display",
+    "workTypes": [
+     "Cabinetry",
+     "Display unit"
+    ],
+    "tags": [
+     "Decorative cabinetry",
+     "Display unit",
+     "Open shelves",
+     "Curved form",
+     "Concealed lighting"
+    ]
+   }
+  },
+  {
+   "id": "b1-03",
+   "slug": "wall-workstation-tall-storage",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -3.jpg",
+   "imagePath": "/assets/gallery/img-03.jpg",
+   "width": 736,
+   "height": 1228,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "alsoOriginalPaths": [
+    "/Users/hashemi/Downloads/Office Interior.jpg"
+   ],
+   "hidden": false,
+   "fa": {
+    "title": "میز کار گروهی دیواری با کمدهای سرتاسری",
+    "description": "میز کار ممتد در امتداد دیوار با چند جایگاه کامپیوتر و کشوهای زیر میز. کمدهای مرتفع روشن، قفسه‌های باز تیره و پوشش دیوار با ظاهر چوب، فضای کار و نگهداری وسایل را در یک ترکیب منظم کنار هم قرار داده‌اند.",
+    "alt": "میز کار گروهی دیواری با کمدهای سرتاسری — ایستگاه کار",
+    "subcategory": "ایستگاه کار",
+    "workTypes": [
+     "میز گروهی"
+    ],
+    "tags": [
+     "میز کار گروهی",
+     "کمد اداری",
+     "قفسه‌بندی",
+     "نور خطی",
+     "فضای ذخیره‌سازی"
+    ]
+   },
+   "en": {
+    "title": "Wall workstation with full-height storage",
+    "description": "A continuous wall desk provides several computer stations and drawers beneath. Tall pale cupboards, dark open shelves and wood-look wall panels bring work and storage into one orderly arrangement.",
+    "alt": "Wall workstation with full-height storage — Workstation",
+    "subcategory": "Workstation",
+    "workTypes": [
+     "Shared desks"
+    ],
+    "tags": [
+     "Shared workstation",
+     "Office storage",
+     "Shelving",
+     "Linear lighting",
+     "Storage"
+    ]
+   }
+  },
+  {
+   "id": "b1-04",
+   "slug": "light-executive-desk-lit-bookcase",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -4.jpg",
+   "imagePath": "/assets/gallery/img-04.jpg",
+   "width": 688,
+   "height": 683,
+   "category": "office",
+   "featured": true,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "میز مدیریت روشن با کتابخانه نورپردازی‌شده",
+    "description": "میز مدیریت بزرگ با ترکیب رنگ‌های خنثی، صفحه تیره و نورپردازی گرم در بخش جلویی. کتابخانه پشت میز با قفسه‌های باز و سطوح شیاردار، ترکیب بصری هماهنگی با میز و دیوارهای اطراف ایجاد کرده است.",
+    "alt": "میز مدیریت روشن با کتابخانه نورپردازی‌شده — اتاق مدیریت",
+    "subcategory": "اتاق مدیریت",
+    "workTypes": [
+     "میز مدیریت"
+    ],
+    "tags": [
+     "میز مدیریت",
+     "کتابخانه",
+     "دکور اداری",
+     "سطوح شیاردار",
+     "نور مخفی"
+    ]
+   },
+   "en": {
+    "title": "Light executive desk and illuminated bookcase",
+    "description": "A large desk pairs neutral tones with a dark top and warm lighting across its front. Open shelving and fluted surfaces behind the desk echo the room's lines.",
+    "alt": "Light executive desk and illuminated bookcase — Executive office",
+    "subcategory": "Executive office",
+    "workTypes": [
+     "Executive desk"
+    ],
+    "tags": [
+     "Executive desk",
+     "Bookcase",
+     "Office interior",
+     "Fluted surfaces",
+     "Concealed lighting"
+    ]
+   }
+  },
+  {
+   "id": "b1-05",
+   "slug": "geometric-reception-counter-linear-wood",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -5.jpg",
+   "imagePath": "/assets/gallery/img-05.jpg",
+   "width": 736,
+   "height": 662,
+   "category": "reception",
+   "featured": true,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کانتر پذیرش هندسی با نمای چوبی خطی",
+    "description": "کانتر پذیرش با ترکیب سطح سفید زاویه‌دار و نوارهای افقی با ظاهر چوب. دیوار پشت کانتر با خطوط عمودی، پس‌زمینه‌ای هماهنگ برای محل نصب نشان تجاری ایجاد کرده است.",
+    "alt": "کانتر پذیرش هندسی با نمای چوبی خطی — کانتر پذیرش",
+    "subcategory": "کانتر پذیرش",
+    "workTypes": [
+     "کانتر"
+    ],
+    "tags": [
+     "کانتر پذیرش",
+     "دکور تجاری",
+     "فرم هندسی",
+     "دیوارپوش خطی"
+    ]
+   },
+   "en": {
+    "title": "Geometric reception counter with linear detailing",
+    "description": "An angled white surface meets horizontal wood-look strips. Vertical lines on the wall behind create an orderly backdrop for a reception area.",
+    "alt": "Geometric reception counter with linear detailing — Reception counter",
+    "subcategory": "Reception counter",
+    "workTypes": [
+     "Counter"
+    ],
+    "tags": [
+     "Reception counter",
+     "Commercial interior",
+     "Geometric form",
+     "Linear wall panels"
+    ]
+   }
+  },
+  {
+   "id": "b1-06",
+   "slug": "white-wood-reception-counter-linear-light",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -6.jpg",
+   "imagePath": "/assets/gallery/img-06.jpg",
+   "width": 736,
+   "height": 736,
+   "category": "reception",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کانتر پذیرش سفید و چوب با نور خطی",
+    "description": "کانتر پذیرش با بدنه دارای ظاهر چوب و پنل سفید با لبه مورب. نور گرم در امتداد اتصال دو سطح، فرم کانتر را برجسته کرده و با دیوارهای ساده و پوشش چوبی اطراف هماهنگ شده است.",
+    "alt": "کانتر پذیرش سفید و چوب با نور خطی — کانتر پذیرش",
+    "subcategory": "کانتر پذیرش",
+    "workTypes": [
+     "کانتر"
+    ],
+    "tags": [
+     "میز پذیرش",
+     "ترکیب سفید و چوب",
+     "نورپردازی خطی",
+     "طراحی مدرن"
+    ]
+   },
+   "en": {
+    "title": "White and wood-look reception with linear light",
+    "description": "A wood-look counter meets a white panel with a sloping edge. Warm light traces the junction, picking out its shape against simple walls and surrounding wood-look finishes.",
+    "alt": "White and wood-look reception with linear light — Reception counter",
+    "subcategory": "Reception counter",
+    "workTypes": [
+     "Counter"
+    ],
+    "tags": [
+     "Reception desk",
+     "White & wood-look tones",
+     "Linear lighting",
+     "Modern design"
+    ]
+   }
+  },
+  {
+   "id": "b1-07",
+   "slug": "dark-wood-executive-desk-bookcase",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -7.jpg",
+   "imagePath": "/assets/gallery/img-07.jpg",
+   "width": 736,
+   "height": 695,
+   "category": "office",
+   "featured": true,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "میز و کتابخانه مدیریت با رنگ چوب تیره",
+    "description": "مجموعه میز مدیریت و کمد پشت میز با ظاهر چوب تیره و جزئیات مشکی. کتابخانه شامل قفسه‌های باز، کابینت‌های بسته و بخش شیشه‌ای است و فضایی برای نگهداری زونکن و نمایش اشیای دکوراتیو فراهم می‌کند.",
+    "alt": "میز و کتابخانه مدیریت با رنگ چوب تیره — اتاق مدیریت",
+    "subcategory": "اتاق مدیریت",
+    "workTypes": [
+     "میز مدیریت"
+    ],
+    "tags": [
+     "میز مدیریت",
+     "کتابخانه اداری",
+     "کمد بایگانی",
+     "ویترین شیشه‌ای",
+     "چوب تیره"
+    ]
+   },
+   "en": {
+    "title": "Dark wood-look desk and storage",
+    "description": "An executive desk and matching storage combine dark wood-look surfaces with black detailing. Open shelves, closed cabinets and a glazed section provide places for files and display objects.",
+    "alt": "Dark wood-look desk and storage — Executive office",
+    "subcategory": "Executive office",
+    "workTypes": [
+     "Executive desk"
+    ],
+    "tags": [
+     "Executive desk",
+     "Office bookcase",
+     "Filing cabinet",
+     "Glass display",
+     "Dark wood-look tones"
+    ]
+   }
+  },
+  {
+   "id": "b1-08",
+   "slug": "meeting-room-glass-partition",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -8.jpg",
+   "imagePath": "/assets/gallery/img-08.jpg",
+   "width": 736,
+   "height": 1104,
+   "category": "office",
+   "featured": true,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "اتاق جلسات با میز روشن و پارتیشن شیشه‌ای",
+    "description": "اتاق جلسات با میز مستطیلی بزرگ، صندلی‌های قهوه‌ای و دیوار نمایشگر تیره. پارتیشن‌های شیشه‌ای با قاب مشکی و سقف تیغه‌ای سفید، ساختار منظم و مشخصی به فضا داده‌اند.",
+    "alt": "اتاق جلسات با میز روشن و پارتیشن شیشه‌ای — اتاق جلسات",
+    "subcategory": "اتاق جلسات",
+    "workTypes": [
+     "میز جلسات"
+    ],
+    "tags": [
+     "میز کنفرانس",
+     "اتاق جلسات",
+     "پارتیشن شیشه‌ای",
+     "دیوار نمایشگر",
+     "سقف تیغه‌ای"
+    ]
+   },
+   "en": {
+    "title": "Meeting room behind glass partitions",
+    "description": "A large rectangular table, brown chairs and a dark display wall define the meeting area. Black-framed glazing and white ceiling fins give the room a clear architectural rhythm.",
+    "alt": "Meeting room behind glass partitions — Meeting room",
+    "subcategory": "Meeting room",
+    "workTypes": [
+     "Meeting table"
+    ],
+    "tags": [
+     "Conference table",
+     "Meeting room",
+     "Glass partition",
+     "Display wall",
+     "Ceiling fins"
+    ]
+   }
+  },
+  {
+   "id": "b1-10",
+   "slug": "open-office-exposed-ceiling",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -10.jpg",
+   "imagePath": "/assets/gallery/img-10.jpg",
+   "width": 528,
+   "height": 790,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "فضای اداری گسترده با سقف تأسیسات نمایان",
+    "description": "ردیف‌های میز کار سفید با فایل‌های کشویی و صندلی‌های مشکی در یک سالن اداری باز. تأسیسات نمایان سقف، چراغ‌های آویز و نورهای خطی، حال‌وهوای صنعتی فضا را شکل داده‌اند و گیاهان میان میزها به تفکیک بصری کمک می‌کنند.",
+    "alt": "فضای اداری گسترده با سقف تأسیسات نمایان — دفتر کار باز",
+    "subcategory": "دفتر کار باز",
+    "workTypes": [
+     "میز گروهی"
+    ],
+    "tags": [
+     "تجهیز فضای اداری",
+     "میز گروهی",
+     "سبک صنعتی",
+     "تأسیسات نمایان",
+     "چیدمان باز"
+    ]
+   },
+   "en": {
+    "title": "Open office with an exposed ceiling",
+    "description": "Rows of white desks, drawer units and black chairs fill an open workspace. Exposed services, pendant and linear lights establish an industrial character, while plants provide visual separation.",
+    "alt": "Open office with an exposed ceiling — Open office",
+    "subcategory": "Open office",
+    "workTypes": [
+     "Shared desks"
+    ],
+    "tags": [
+     "Office fit-out",
+     "Shared desks",
+     "Industrial style",
+     "Exposed services",
+     "Open layout"
+    ]
+   }
+  },
+  {
+   "id": "b1-11",
+   "slug": "group-workspace-graphic-wall",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -11.jpg",
+   "imagePath": "/assets/gallery/img-11.jpg",
+   "width": 736,
+   "height": 736,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "فضای کار گروهی با دیوار گرافیکی",
+    "description": "میزهای کار گروهی با صفحات روشن، پایه‌های تیره و جداکننده‌های خاکستری. سقف تیره با تأسیسات نمایان و نور خطی، در کنار دیوار گرافیکی با جزئیات زرد و آبی، به فضا حال‌وهوایی پویا داده است.",
+    "alt": "فضای کار گروهی با دیوار گرافیکی — دفتر کار باز",
+    "subcategory": "دفتر کار باز",
+    "workTypes": [
+     "میز گروهی"
+    ],
+    "tags": [
+     "فضای کار گروهی",
+     "جداکننده میز",
+     "دیوار گرافیکی",
+     "سقف باز",
+     "نور خطی"
+    ]
+   },
+   "en": {
+    "title": "Shared workspace with a graphic wall",
+    "description": "Light desk surfaces, dark legs and grey dividers form shared workstations. An exposed dark ceiling and linear lighting sit above a graphic wall with yellow and blue accents.",
+    "alt": "Shared workspace with a graphic wall — Open office",
+    "subcategory": "Open office",
+    "workTypes": [
+     "Shared desks"
+    ],
+    "tags": [
+     "Shared workspace",
+     "Desk divider",
+     "Graphic wall",
+     "Open ceiling",
+     "Linear lighting"
+    ]
+   }
+  },
+  {
+   "id": "b1-12",
+   "slug": "minimal-office-white-desks",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -12.jpg",
+   "imagePath": "/assets/gallery/img-12.jpg",
+   "width": 735,
+   "height": 951,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "دفتر کار مینیمال با میزهای سفید",
+    "description": "چیدمان منظم میزهای سفید و صندلی‌های مشکی در فضایی روشن با پارتیشن‌های شیشه‌ای. فایل‌های زیر میز، نظم‌دهنده‌های رومیزی با ظاهر چوب و فضای نشیمن کوچک در انتهای سالن، بخش‌های مختلف محیط کار را تکمیل کرده‌اند.",
+    "alt": "دفتر کار مینیمال با میزهای سفید — دفتر کار باز",
+    "subcategory": "دفتر کار باز",
+    "workTypes": [
+     "میز گروهی"
+    ],
+    "tags": [
+     "دفتر کار مینیمال",
+     "میز اداری",
+     "پارتیشن شیشه‌ای",
+     "فایل اداری",
+     "فضای نشیمن"
+    ]
+   },
+   "en": {
+    "title": "Minimal office with white desks",
+    "description": "White desks and black chairs are arranged in a bright office with glass partitions. Under-desk drawers, wood-look desk organisers and a small seating area complete the setting.",
+    "alt": "Minimal office with white desks — Open office",
+    "subcategory": "Open office",
+    "workTypes": [
+     "Shared desks"
+    ],
+    "tags": [
+     "Minimal office",
+     "Office desk",
+     "Glass partition",
+     "Office drawer unit",
+     "Seating area"
+    ]
+   }
+  },
+  {
+   "id": "b1-13",
+   "slug": "light-green-cabinets-upper-display",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -13.jpg",
+   "imagePath": "/assets/gallery/img-13.jpg",
+   "width": 736,
+   "height": 1308,
+   "category": "residential",
+   "featured": true,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کابینت سبز روشن با ویترین فوقانی",
+    "description": "کابینت‌های سبز روشن با سطوح صاف و براق، صفحه روشن و سینک سفید با پیشانی نمایان. ویترین‌های شیشه‌ای بالای کابینت‌ها با قاب تیره و نور گرم، همراه با نور زیر کابینت و پایین یونیت‌ها، لایه‌های مختلف ترکیب را برجسته کرده‌اند.",
+    "alt": "کابینت سبز روشن با ویترین فوقانی — آشپزخانه و کابینت",
+    "subcategory": "آشپزخانه و کابینت",
+    "workTypes": [
+     "کابینت",
+     "ویترین"
+    ],
+    "tags": [
+     "کابینت سبز",
+     "ویترین شیشه‌ای",
+     "نور زیر کابینت",
+     "سینک پیشانی‌دار",
+     "آشپزخانه مدرن"
+    ]
+   },
+   "en": {
+    "title": "Pale green cabinetry with upper glass displays",
+    "description": "Smooth, glossy pale green fronts meet a light worktop and white apron-front sink. Dark-framed upper displays and warm lighting above, below and within the cabinets reveal the layers of the composition.",
+    "alt": "Pale green cabinetry with upper glass displays — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "workTypes": [
+     "Cabinetry",
+     "Display unit"
+    ],
+    "tags": [
+     "Green cabinetry",
+     "Glass display",
+     "Under-cabinet lighting",
+     "Apron-front sink",
+     "Modern kitchen"
+    ]
+   }
+  },
+  {
+   "id": "b1-14",
+   "slug": "u-shaped-kitchen-green-white",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -14.jpg",
+   "imagePath": "/assets/gallery/img-14.jpg",
+   "width": 735,
+   "height": 985,
+   "category": "residential",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "آشپزخانه سه‌طرفه سبز و سفید",
+    "description": "آشپزخانه با چیدمان سه‌طرفه و ترکیب کابینت‌های سبز روشن و سفید. سطوح روشن با طرح رگه‌دار، تجهیزات مشکی، کابینت‌های مرتفع و نورپردازی خطی سقف، ترکیبی یکپارچه و مدرن ایجاد کرده‌اند.",
+    "alt": "آشپزخانه سه‌طرفه سبز و سفید — آشپزخانه و کابینت",
+    "subcategory": "آشپزخانه و کابینت",
+    "workTypes": [
+     "کابینت"
+    ],
+    "tags": [
+     "آشپزخانه U شکل",
+     "کابینت سبز و سفید",
+     "تجهیزات توکار",
+     "سطوح طرح سنگ",
+     "نور خطی"
+    ]
+   },
+   "en": {
+    "title": "Green and white U-shaped kitchen",
+    "description": "Pale green and white cabinetry wraps around three sides of the kitchen. Light veined surfaces, black appliances, tall cabinets and linear ceiling lighting create a continuous composition.",
+    "alt": "Green and white U-shaped kitchen — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "workTypes": [
+     "Cabinetry"
+    ],
+    "tags": [
+     "U-shaped kitchen",
+     "Green & white cabinetry",
+     "Integrated appliances",
+     "Stone-look surfaces",
+     "Linear lighting"
+    ]
+   }
+  },
+  {
+   "id": "b1-15",
+   "slug": "warm-wood-look-kitchen",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -15.jpg",
+   "imagePath": "/assets/gallery/img-15.jpg",
+   "width": 735,
+   "height": 981,
+   "category": "residential",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "آشپزخانه با ظاهر چوب و رنگ‌های گرم",
+    "description": "ترکیب کابینت‌های پایین با ظاهر چوب و کابینت‌های بالایی به رنگ خنثی گرم. صفحه روشن، تجهیزات توکار مشکی و نور زیر کابینت، در کنار میز غذاخوری هماهنگ و چراغ‌های آویز، فضای آشپزخانه و غذاخوری را به هم پیوند داده‌اند.",
+    "alt": "آشپزخانه با ظاهر چوب و رنگ‌های گرم — آشپزخانه و کابینت",
+    "subcategory": "آشپزخانه و کابینت",
+    "workTypes": [
+     "کابینت"
+    ],
+    "tags": [
+     "کابینت با ظاهر چوب",
+     "آشپزخانه گرم",
+     "تجهیزات توکار",
+     "میز غذاخوری",
+     "نورپردازی آویز"
+    ]
+   },
+   "en": {
+    "title": "Kitchen in warm wood-look tones",
+    "description": "Wood-look lower cabinets sit beneath warm neutral upper units. A light worktop, black integrated appliances and under-cabinet lighting connect with a coordinated dining table and pendant lights.",
+    "alt": "Kitchen in warm wood-look tones — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "workTypes": [
+     "Cabinetry"
+    ],
+    "tags": [
+     "Wood-look cabinetry",
+     "Warm kitchen palette",
+     "Integrated appliances",
+     "Dining table",
+     "Pendant lighting"
+    ]
+   }
+  },
+  {
+   "id": "b1-16",
+   "slug": "green-framed-cabinets-black-display",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -16.jpg",
+   "imagePath": "/assets/gallery/img-16.jpg",
+   "width": 735,
+   "height": 1294,
+   "category": "residential",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کابینت سبز قاب‌دار با ویترین مشکی",
+    "description": "آشپزخانه کشیده با کابینت‌های سبز قاب‌دار، دستگیره‌های مشکی و ویترین‌های شیشه‌ای با قاب تیره. صفحه و دیوار بین کابینتی روشن با طرح رگه‌دار، همراه نور داخلی ویترین و نور زیر کابینت، تضاد ملایمی با رنگ سبز ایجاد کرده‌اند.",
+    "alt": "کابینت سبز قاب‌دار با ویترین مشکی — آشپزخانه و کابینت",
+    "subcategory": "آشپزخانه و کابینت",
+    "workTypes": [
+     "کابینت",
+     "ویترین"
+    ],
+    "tags": [
+     "کابینت قاب‌دار",
+     "سبک شیکر",
+     "کابینت سبز",
+     "ویترین مشکی",
+     "آشپزخانه کشیده"
+    ]
+   },
+   "en": {
+    "title": "Framed green cabinets and dark glass displays",
+    "description": "A long kitchen combines framed green fronts, black handles and dark-framed glass displays. Light veined surfaces and lighting inside and beneath the cabinets provide a gentle contrast.",
+    "alt": "Framed green cabinets and dark glass displays — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "workTypes": [
+     "Cabinetry",
+     "Display unit"
+    ],
+    "tags": [
+     "Framed cabinetry",
+     "Shaker style",
+     "Green cabinetry",
+     "Black display unit",
+     "Galley kitchen"
+    ]
+   }
+  },
+  {
+   "id": "b1-17",
+   "slug": "kitchen-breakfast-counter-fluted",
+   "batch": 1,
+   "originalPath": "/Users/hashemi/Downloads/ -17.jpg",
+   "imagePath": "/assets/gallery/img-17.jpg",
+   "width": 736,
+   "height": 975,
+   "category": "residential",
+   "featured": true,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "آشپزخانه با کانتر صبحانه‌خوری و نمای شیاردار",
+    "description": "آشپزخانه با کابینت‌های بالایی دارای ظاهر چوب و یونیت‌های پایین خاکستری. کانتر صبحانه‌خوری با نمای عمودی شیاردار، صفحه روشن و نور مخفی، همراه قفسه‌های دکوراتیو نورپردازی‌شده و چراغ‌های آویز باریک، نقطه شاخص تصویر است.",
+    "alt": "آشپزخانه با کانتر صبحانه‌خوری و نمای شیاردار — آشپزخانه و کابینت",
+    "subcategory": "آشپزخانه و کابینت",
+    "workTypes": [
+     "کابینت",
+     "کانتر"
+    ],
+    "tags": [
+     "کانتر صبحانه‌خوری",
+     "نمای شیاردار",
+     "کابینت چوب و خاکستری",
+     "قفسه دکوراتیو",
+     "نور مخفی"
+    ]
+   },
+   "en": {
+    "title": "Breakfast counter with a fluted front",
+    "description": "Wood-look upper cabinets meet grey lower units. A breakfast counter with vertical fluting, a pale top and concealed lighting forms the focal point, with illuminated shelves and slim pendants nearby.",
+    "alt": "Breakfast counter with a fluted front — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "workTypes": [
+     "Cabinetry",
+     "Counter"
+    ],
+    "tags": [
+     "Breakfast counter",
+     "Fluted front",
+     "Wood-look & grey cabinetry",
+     "Display shelves",
+     "Concealed lighting"
+    ]
+   }
+  },
+  {
+   "id": "b2-01",
+   "slug": "dark-display-bookcase",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Elegant Storage Cabinet with Soft Lighting Strip and Open Storage - Khaki _ Without LED Strip _ L47 x W16 x H79.jpg",
+   "imagePath": "/assets/gallery/b2-dark-display-bookcase.jpg",
+   "width": 736,
+   "height": 736,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "relatedIds": [
+    "b2-02"
+   ],
+   "hidden": false,
+   "fa": {
+    "title": "کتابخانه سرتاسری تیره با نورپردازی داخلی",
+    "description": "کتابخانه‌ای سرتاسری با ترکیب قفسه‌های باز، کابینت‌های پایین و پنل‌های عمودی با ظاهر چوب. رنگ‌های تیره، بخش شیاردار و نورپردازی گرم داخل قفسه‌ها، فضای نگهداری و نمایش اشیا را در یک مجموعه منظم کنار هم قرار داده‌اند.",
+    "alt": "کتابخانه تیره با قفسه‌های باز و نور گرم داخل طبقات",
+    "subcategory": "کتابخانه و کمد اداری",
+    "workTypes": [
+     "کتابخانه",
+     "کمد"
+    ],
+    "tags": [
+     "کتابخانه",
+     "کمد اداری",
+     "قفسه باز",
+     "نور مخفی",
+     "پنل شیاردار"
+    ]
+   },
+   "en": {
+    "title": "Dark wall bookcase with integrated lighting",
+    "description": "Open shelves, lower cabinets and vertical wood-look panels form a wall of storage. Dark tones, fluted detailing and warm shelf lighting bring storage and display together.",
+    "alt": "Dark wall bookcase with integrated lighting — Office bookcases & storage",
+    "subcategory": "Office bookcases & storage",
+    "workTypes": [
+     "Bookcase",
+     "Wardrobe & storage"
+    ],
+    "tags": [
+     "Bookcase",
+     "Office storage",
+     "Open shelves",
+     "Concealed lighting",
+     "Fluted panel"
+    ]
+   }
+  },
+  {
+   "id": "b2-02",
+   "slug": "dark-bookcase-angle",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Cabinet 3-Tier Storage Bookshelf Office Stationery Living Room Children's Bookstore Wooden Shelf.jpg",
+   "imagePath": "/assets/gallery/b2-dark-bookcase-angle.jpg",
+   "width": 736,
+   "height": 736,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "watermark": true,
+   "relatedIds": [
+    "b2-01"
+   ],
+   "hidden": false,
+   "fa": {
+    "title": "نمای زاویه‌دار کتابخانه با قفسه‌های روشن‌شده",
+    "description": "نمای زاویه‌دار یک مجموعه کتابخانه با قفسه‌های باز تیره، درهای ساده و بخش‌هایی با ظاهر چوب. نور گرم قفسه‌ها و ترکیب فضاهای باز و بسته، امکان نمایش اشیای دکوراتیو و نگهداری وسایل را فراهم کرده‌اند.",
+    "alt": "نمای زاویه‌دار کتابخانه تیره با قفسه‌های نورپردازی‌شده",
+    "subcategory": "کتابخانه و کمد اداری",
+    "workTypes": [
+     "کتابخانه",
+     "کمد"
+    ],
+    "tags": [
+     "کتابخانه",
+     "کمد اداری",
+     "قفسه‌بندی",
+     "نور داخلی"
+    ]
+   },
+   "en": {
+    "title": "Angled view of an illuminated bookcase",
+    "description": "This angled view shows dark open shelving, plain doors and wood-look sections. Warm shelf lighting gives depth to the combination of open display and closed storage.",
+    "alt": "Angled view of an illuminated bookcase — Office bookcases & storage",
+    "subcategory": "Office bookcases & storage",
+    "workTypes": [
+     "Bookcase",
+     "Wardrobe & storage"
+    ],
+    "tags": [
+     "Bookcase",
+     "Office storage",
+     "Shelving",
+     "Interior lighting"
+    ]
+   }
+  },
+  {
+   "id": "b2-03",
+   "slug": "black-coffee-point",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Chic Countertop Coffee Station Decor_ 5 Inspiring Ideas for Stylish Mornings and Cozy Vibes.jpg",
+   "imagePath": "/assets/gallery/b2-black-coffee-point.jpg",
+   "width": 736,
+   "height": 1104,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کافی‌پوینت با کابینت مشکی و دیوارپوش خطی",
+    "description": "فضای آماده‌سازی نوشیدنی با کابینت‌های مشکی، سینک و دستگاه قهوه. دیوارپوش عمودی با ظاهر چوب و شلف ممتد بالای کانتر، در کنار رنگ‌های تیره، ترکیبی ساده و گرم ایجاد کرده‌اند.",
+    "alt": "کافی‌پوینت با کابینت مشکی و دیوارپوش چوبی خطی",
+    "subcategory": "آبدارخانه و فضای استراحت",
+    "workTypes": [
+     "آبدارخانه",
+     "کابینت"
+    ],
+    "tags": [
+     "کافی‌پوینت",
+     "آبدارخانه",
+     "کابینت مشکی",
+     "دیوارپوش خطی",
+     "شلف"
+    ]
+   },
+   "en": {
+    "title": "Black coffee point with linear wall panels",
+    "description": "Black cabinetry, a sink and a coffee machine form a compact drinks area. Vertical wood-look panels and a continuous shelf add warmth to the dark palette.",
+    "alt": "Black coffee point with linear wall panels — Pantry & break area",
+    "subcategory": "Pantry & break area",
+    "workTypes": [
+     "Pantry",
+     "Cabinetry"
+    ],
+    "tags": [
+     "Coffee point",
+     "Pantry",
+     "Black cabinetry",
+     "Linear wall panels",
+     "Shelf"
+    ]
+   }
+  },
+  {
+   "id": "b2-04",
+   "slug": "white-wood-reception-hidden-light",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Amazon_com_ Reception Desk - Modern Design Front Desk with Hidden LED Lighting, Spacious Checkout Counter and Retail Counter Features, Solid Wood Construction, No Assembly Required (Wood & White, 104\") _ Office Products.jpg",
+   "imagePath": "/assets/gallery/b2-white-wood-reception-hidden-light.jpg",
+   "width": 679,
+   "height": 679,
+   "category": "reception",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کانتر پذیرش سفید و چوب با نور مخفی",
+    "description": "کانتر پذیرش کشیده با ترکیب پنل دارای ظاهر چوب و قاب سفید پلکانی. نور مخفی در امتداد بخش سفید، فرم افقی میز را برجسته کرده و با چراغ‌های آویز و فضای مینیمال اطراف هماهنگ شده است.",
+    "alt": "کانتر پذیرش کشیده سفید و چوب با چراغ‌های آویز",
+    "subcategory": "کانتر پذیرش",
+    "workTypes": [
+     "کانتر"
+    ],
+    "tags": [
+     "کانتر پذیرش",
+     "سفید و چوب",
+     "نور مخفی",
+     "دکور اداری"
+    ]
+   },
+   "en": {
+    "title": "White and wood-look reception with concealed light",
+    "description": "An elongated counter combines wood-look panels with a stepped white frame. Concealed light emphasises its horizontal form beneath pendant lights in a minimal setting.",
+    "alt": "White and wood-look reception with concealed light — Reception counter",
+    "subcategory": "Reception counter",
+    "workTypes": [
+     "Counter"
+    ],
+    "tags": [
+     "Reception counter",
+     "White & wood-look tones",
+     "Concealed lighting",
+     "Office interior"
+    ]
+   }
+  },
+  {
+   "id": "b2-05",
+   "slug": "navy-kitchen-island",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Descubra 15 Ideias Surpreendentes De Armários Azul Marinho Para Modernizar Sua Cozinha!.jpg",
+   "imagePath": "/assets/gallery/b2-navy-kitchen-island.jpg",
+   "width": 736,
+   "height": 736,
+   "category": "residential",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "آشپزخانه سرمه‌ای با جزیره دارای ظاهر چوب",
+    "description": "آشپزخانه با کابینت‌های سرمه‌ای و جزیره‌ای با صفحه و کناره‌های دارای ظاهر چوب. شلف‌های باز، چراغ‌های آویز مشکی و نشیمن کنار جزیره، ترکیب رنگ تیره و بافت گرم چوب را کامل کرده‌اند.",
+    "alt": "آشپزخانه با کابینت سرمه‌ای و جزیره چوب‌رنگ",
+    "subcategory": "آشپزخانه و کابینت",
+    "workTypes": [
+     "کابینت"
+    ],
+    "tags": [
+     "کابینت سرمه‌ای",
+     "جزیره آشپزخانه",
+     "شلف باز",
+     "صبحانه‌خوری",
+     "چراغ آویز"
+    ]
+   },
+   "en": {
+    "title": "Navy kitchen with a wood-look island",
+    "description": "Navy cabinets surround an island with wood-look surfaces. Open shelves, black pendants and island seating balance deep colour with a warm-looking texture.",
+    "alt": "Navy kitchen with a wood-look island — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "workTypes": [
+     "Cabinetry"
+    ],
+    "tags": [
+     "Navy cabinetry",
+     "Kitchen island",
+     "Open shelves",
+     "Breakfast seating",
+     "Pendant light"
+    ]
+   }
+  },
+  {
+   "id": "b2-06",
+   "slug": "minimal-dark-executive-desk",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/European Furniture, Modern Italian Furniture Chicago.jpg",
+   "imagePath": "/assets/gallery/b2-minimal-dark-executive-desk.jpg",
+   "width": 734,
+   "height": 369,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "میز مدیریت مینیمال در فضای تیره",
+    "description": "میز مدیریت با صفحه دارای ظاهر چوب، جزئیات روشن و فایل کشویی جانبی تیره. دیوارهای خاکستری، قفسه دیواری باریک و مبلمان مشکی، فضایی مینیمال با خطوط هندسی ساده شکل داده‌اند.",
+    "alt": "میز مدیریت مینیمال با فایل کشویی در اتاقی تیره",
+    "subcategory": "اتاق و میز مدیریت",
+    "workTypes": [
+     "میز مدیریت"
+    ],
+    "tags": [
+     "میز مدیریت",
+     "فایل کشویی",
+     "دکور تیره",
+     "سبک مینیمال"
+    ]
+   },
+   "en": {
+    "title": "Minimal executive desk in a dark room",
+    "description": "A wood-look desk surface, pale detailing and a dark side drawer unit sit against grey walls. A narrow wall shelf and black furniture reinforce the simple geometric lines.",
+    "alt": "Minimal executive desk in a dark room — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "workTypes": [
+     "Executive desk"
+    ],
+    "tags": [
+     "Executive desk",
+     "Drawer unit",
+     "Dark interior",
+     "Minimal style"
+    ]
+   }
+  },
+  {
+   "id": "b2-07",
+   "slug": "executive-desk-storage-set",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/from China Manufacturer_.jpg",
+   "imagePath": "/assets/gallery/b2-executive-desk-storage-set.jpg",
+   "width": 550,
+   "height": 335,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "میز مدیریت بزرگ با کتابخانه هماهنگ",
+    "description": "میز مدیریت بزرگ با صفحه دارای ظاهر چوب و بدنه تیره، همراه با بخش جانبی نگهداری وسایل. کتابخانه پشت میز با ترکیب سطوح بسته و قفسه‌های باز، از همان زبان رنگ و فرم پیروی می‌کند.",
+    "alt": "میز مدیریت بزرگ با کتابخانه پشت آن",
+    "subcategory": "اتاق و میز مدیریت",
+    "workTypes": [
+     "میز مدیریت",
+     "کتابخانه"
+    ],
+    "tags": [
+     "میز مدیریت",
+     "کتابخانه اداری",
+     "میز جانبی",
+     "چوب و خاکستری"
+    ]
+   },
+   "en": {
+    "title": "Executive desk with coordinated storage",
+    "description": "A large wood-look desktop meets a dark base and side storage. The bookcase behind combines closed panels and open shelving in the same palette.",
+    "alt": "Executive desk with coordinated storage — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "workTypes": [
+     "Executive desk",
+     "Bookcase"
+    ],
+    "tags": [
+     "Executive desk",
+     "Office bookcase",
+     "Side table",
+     "Wood-look & grey tones"
+    ]
+   }
+  },
+  {
+   "id": "b2-08",
+   "slug": "warm-wood-executive-room",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/interior minimalis,kitchen set,meja kantor, interior design, interior HPL, Lemari tv,kamar set minim.jpg",
+   "imagePath": "/assets/gallery/b2-warm-wood-executive-room.jpg",
+   "width": 736,
+   "height": 736,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "watermark": true,
+   "hidden": false,
+   "fa": {
+    "title": "اتاق مدیریت با دیوارپوش چوبی و قفسه‌های نورپردازی‌شده",
+    "description": "فضای مدیریت با میز دارای ظاهر چوب، پنل‌های روشن پشت میز و قفسه‌های دکوراتیو نورپردازی‌شده. امتداد پوشش دیوار و نور مخفی سقف، اجزای مختلف اتاق را در یک ترکیب هماهنگ به هم متصل کرده‌اند.",
+    "alt": "اتاق مدیریت با میز چوب‌رنگ و قفسه‌های نورپردازی‌شده",
+    "subcategory": "اتاق و میز مدیریت",
+    "workTypes": [
+     "میز مدیریت",
+     "کتابخانه"
+    ],
+    "tags": [
+     "اتاق مدیریت",
+     "دیوارپوش",
+     "قفسه دکوراتیو",
+     "نور مخفی",
+     "میز اداری"
+    ]
+   },
+   "en": {
+    "title": "Executive room with warm wall panels",
+    "description": "A wood-look desk, pale panels and illuminated display shelves define this office. Continuous wall treatments and concealed ceiling light connect the different elements.",
+    "alt": "Executive room with warm wall panels — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "workTypes": [
+     "Executive desk",
+     "Bookcase"
+    ],
+    "tags": [
+     "Executive office",
+     "Wall panels",
+     "Display shelves",
+     "Concealed lighting",
+     "Office desk"
+    ]
+   }
+  },
+  {
+   "id": "b2-09",
+   "slug": "closet-accessory-drawer",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Luxury Walk-In Closet Organization Ideas | Jewelry & Accessories Storage.jpg",
+   "imagePath": "/assets/gallery/b2-closet-accessory-drawer.jpg",
+   "width": 736,
+   "height": 1155,
+   "category": "residential",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کشوی تقسیم‌بندی‌شده اکسسوری در کمد لباس",
+    "description": "نمای نزدیک یک کشوی تقسیم‌بندی‌شده برای نگهداری ساعت، عینک، کمربند و زیورآلات. بدنه با ظاهر چوب، دستگیره‌های طلایی‌رنگ و نور داخلی کمد، بر جزئیات نظم‌دهی و استفاده از فضای ذخیره‌سازی تأکید دارند.",
+    "alt": "کشوی کمد لباس با محفظه‌های جدا برای اکسسوری",
+    "subcategory": "کمد و فضای لباس",
+    "workTypes": [
+     "کمد"
+    ],
+    "tags": [
+     "کمد لباس",
+     "کلوزت",
+     "نظم‌دهنده کشو",
+     "اکسسوری",
+     "جزئیات ساخت"
+    ]
+   },
+   "en": {
+    "title": "Compartmented wardrobe accessory drawer",
+    "description": "A close view shows separate compartments for watches, glasses, belts and jewellery. Wood-look surfaces, gold-toned handles and internal light draw attention to the storage arrangement.",
+    "alt": "Compartmented wardrobe accessory drawer — Wardrobes & dressing areas",
+    "subcategory": "Wardrobes & dressing areas",
+    "workTypes": [
+     "Wardrobe & storage"
+    ],
+    "tags": [
+     "Wardrobe",
+     "Dressing room",
+     "Drawer organiser",
+     "Accessories",
+     "Construction details"
+    ]
+   }
+  },
+  {
+   "id": "b2-10",
+   "slug": "open-office-planter-dividers",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/McCormack & Studio 103 Office - Brisbane | Office Snapshots.jpg",
+   "imagePath": "/assets/gallery/b2-open-office-planter-dividers.jpg",
+   "width": 736,
+   "height": 1104,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "فضای کار روشن با جداکننده‌های گلدان‌دار",
+    "description": "فضای کار گروهی با رنگ‌های روشن، نورهای خطی آویز و سقف شبکه‌ای. کمدهای دارای ظاهر چوب با گلدان‌های یکپارچه، میان مسیر رفت‌وآمد و میزها مرز ایجاد کرده و گیاهان را به بخشی از چیدمان اداری تبدیل کرده‌اند.",
+    "alt": "دفتر کار باز روشن با کمدهای گلدان‌دار میان میزها",
+    "subcategory": "دفتر کار باز",
+    "workTypes": [
+     "میز گروهی",
+     "کمد"
+    ],
+    "tags": [
+     "دفتر کار باز",
+     "جداکننده گلدان‌دار",
+     "کمد اداری",
+     "سقف شبکه‌ای",
+     "رنگ‌های گرم"
+    ]
+   },
+   "en": {
+    "title": "Bright open office with planter dividers",
+    "description": "Pale workstations sit beneath suspended linear lighting and a grid ceiling. Wood-look storage with integrated planters separates desks from circulation paths.",
+    "alt": "Bright open office with planter dividers — Open office",
+    "subcategory": "Open office",
+    "workTypes": [
+     "Shared desks",
+     "Wardrobe & storage"
+    ],
+    "tags": [
+     "Open office",
+     "Planter divider",
+     "Office storage",
+     "Grid ceiling",
+     "Warm colours"
+    ]
+   }
+  },
+  {
+   "id": "b2-11",
+   "slug": "curved-executive-desk-wood-top",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Modern Executive Desk With Wood Top.jpg",
+   "imagePath": "/assets/gallery/b2-curved-executive-desk-wood-top.jpg",
+   "width": 736,
+   "height": 1103,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "میز مدیریت با صفحه چوب‌رنگ و بدنه منحنی",
+    "description": "میز مدیریت با صفحه چوب‌رنگ، گوشه‌های گرد و بدنه جانبی تیره با فرم منحنی. کتابخانه پشت میز ترکیبی از قفسه‌های باز، بخش شیشه‌ای و کابینت‌های پایین دارد و با فضای نشیمن کنار پنجره همراه شده است.",
+    "alt": "میز مدیریت با صفحه چوب‌رنگ و کتابخانه پشت آن",
+    "subcategory": "اتاق و میز مدیریت",
+    "workTypes": [
+     "میز مدیریت",
+     "کتابخانه"
+    ],
+    "tags": [
+     "میز مدیریت",
+     "فرم منحنی",
+     "کتابخانه",
+     "فایل جانبی",
+     "فضای نشیمن"
+    ]
+   },
+   "en": {
+    "title": "Executive desk with a curved base",
+    "description": "A wood-look desktop with rounded corners sits above a dark curved side section. The bookcase behind combines open shelving, glazing and lower cabinets beside a window seating area.",
+    "alt": "Executive desk with a curved base — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "workTypes": [
+     "Executive desk",
+     "Bookcase"
+    ],
+    "tags": [
+     "Executive desk",
+     "Curved form",
+     "Bookcase",
+     "Side storage",
+     "Seating area"
+    ]
+   }
+  },
+  {
+   "id": "b2-12",
+   "slug": "linear-kitchen-wood-frame",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/modern kitchen set f2 - Kitchen - 3D model.jpg",
+   "imagePath": "/assets/gallery/b2-linear-kitchen-wood-frame.jpg",
+   "width": 736,
+   "height": 736,
+   "category": "residential",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "kind": "reference-3d",
+   "hidden": false,
+   "fa": {
+    "title": "آشپزخانه خطی با قاب چوب‌رنگ و کابینت شیاردار",
+    "description": "آشپزخانه خطی با کابینت‌های پایین روشن و یونیت‌های بالایی شیاردار، درون یک قاب سرتاسری با ظاهر چوب. نور مخفی، تجهیزات توکار و ویترین باریک کناری، ترکیب یکپارچه این دیوار آشپزخانه را تکمیل کرده‌اند.",
+    "alt": "آشپزخانه خطی با قاب چوب‌رنگ و کابینت‌های شیاردار",
+    "subcategory": "آشپزخانه و کابینت",
+    "workTypes": [
+     "کابینت"
+    ],
+    "tags": [
+     "آشپزخانه خطی",
+     "کابینت شیاردار",
+     "تجهیزات توکار",
+     "ویترین",
+     "نور مخفی"
+    ]
+   },
+   "en": {
+    "title": "Linear kitchen within a wood-look frame",
+    "description": "Pale lower units and fluted upper cabinets sit inside a continuous wood-look frame. Concealed lighting, integrated appliances and a narrow display section complete the kitchen wall.",
+    "alt": "Linear kitchen within a wood-look frame — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "workTypes": [
+     "Cabinetry"
+    ],
+    "tags": [
+     "Linear kitchen",
+     "Fluted cabinetry",
+     "Integrated appliances",
+     "Display unit",
+     "Concealed lighting"
+    ]
+   }
+  },
+  {
+   "id": "b2-13",
+   "slug": "office-wall-bookcase-warm-light",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Modern Office Interior with Sleek Desk & Elegant Decor.jpg",
+   "imagePath": "/assets/gallery/b2-office-wall-bookcase-warm-light.jpg",
+   "width": 688,
+   "height": 1024,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "فضای کار با کتابخانه سرتاسری و نور گرم",
+    "description": "میز ساده با ظاهر چوب در مقابل مجموعه‌ای سرتاسری از کابینت‌ها و قفسه‌های باز. نورپردازی گرم در امتداد طبقات، رنگ‌های قهوه‌ای و خنثی و صندلی روشن، حال‌وهوایی آرام به فضای کار داده‌اند.",
+    "alt": "میز کار چوب‌رنگ روبه‌روی کتابخانه سرتاسری",
+    "subcategory": "اتاق و میز مدیریت",
+    "workTypes": [
+     "میز مدیریت",
+     "کتابخانه"
+    ],
+    "tags": [
+     "میز کار",
+     "کتابخانه سرتاسری",
+     "کابینت دیواری",
+     "نور گرم",
+     "دکور چوبی"
+    ]
+   },
+   "en": {
+    "title": "Workspace with a warmly lit wall bookcase",
+    "description": "A simple wood-look desk faces a wall of cabinets and open shelving. Warm shelf lighting, brown and neutral tones and a pale chair create a quiet atmosphere.",
+    "alt": "Workspace with a warmly lit wall bookcase — Executive office & desk",
+    "subcategory": "Executive office & desk",
+    "workTypes": [
+     "Executive desk",
+     "Bookcase"
+    ],
+    "tags": [
+     "Desk",
+     "Wall bookcase",
+     "Wall cabinets",
+     "Warm lighting",
+     "Wood-look interior"
+    ]
+   }
+  },
+  {
+   "id": "b2-14",
+   "slug": "white-desks-green-dividers",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Moderne kantooropstelling met witte bureaus en groene planten.jpg",
+   "imagePath": "/assets/gallery/b2-white-desks-green-dividers.jpg",
+   "width": 736,
+   "height": 1104,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "میزهای گروهی سفید با جداکننده سبز",
+    "description": "ردیف میزهای سفید با فایل‌های کشویی و جداکننده‌های خاکستری که گیاهان در امتداد آن‌ها قرار گرفته‌اند. سقف با تأسیسات نمایان و چراغ‌های خطی آویز، در کنار چیدمان منظم میزها، فضای کاری با حال‌وهوای صنعتی ایجاد کرده است.",
+    "alt": "ردیف میزهای سفید با جداکننده‌های همراه گیاه",
+    "subcategory": "دفتر کار باز",
+    "workTypes": [
+     "میز گروهی"
+    ],
+    "tags": [
+     "میز گروهی",
+     "جداکننده رومیزی",
+     "گیاهان",
+     "فایل اداری",
+     "سبک صنعتی"
+    ]
+   },
+   "en": {
+    "title": "White shared desks with planted dividers",
+    "description": "Rows of white desks and drawer units sit beside grey dividers lined with plants. Exposed ceiling services and suspended linear lights add an industrial character to the orderly layout.",
+    "alt": "White shared desks with planted dividers — Open office",
+    "subcategory": "Open office",
+    "workTypes": [
+     "Shared desks"
+    ],
+    "tags": [
+     "Shared desks",
+     "Desktop divider",
+     "Plants",
+     "Office drawer unit",
+     "Industrial style"
+    ]
+   }
+  },
+  {
+   "id": "b2-15",
+   "slug": "asymmetric-filing-cabinet",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Modern Office Storage Cabinet with Wardrobe, Drawers & Display Shelves.jpg",
+   "imagePath": "/assets/gallery/b2-asymmetric-filing-cabinet.jpg",
+   "width": 600,
+   "height": 600,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کمد بایگانی با قفسه‌های نامتقارن",
+    "description": "مجموعه نگهداری اداری با کابینت‌های دردار، کشو و قفسه‌های باز با تقسیم‌بندی نامتقارن. ترکیب سطوح خاکستری با ظاهر چوب و زمینه تیره، جایگاه‌های متنوعی برای زونکن، کتاب و اشیای دکوراتیو فراهم کرده است.",
+    "alt": "کمد اداری با کشو و قفسه‌های باز نامتقارن",
+    "subcategory": "کتابخانه و کمد اداری",
+    "workTypes": [
+     "کمد"
+    ],
+    "tags": [
+     "کمد بایگانی",
+     "کتابخانه",
+     "کشو",
+     "قفسه نامتقارن",
+     "فضای ذخیره‌سازی"
+    ]
+   },
+   "en": {
+    "title": "Office storage with asymmetric shelves",
+    "description": "Closed cabinets, drawers and asymmetric open shelves form a varied storage composition. Grey, wood-look and dark surfaces provide space for files, books and display objects.",
+    "alt": "Office storage with asymmetric shelves — Office bookcases & storage",
+    "subcategory": "Office bookcases & storage",
+    "workTypes": [
+     "Wardrobe & storage"
+    ],
+    "tags": [
+     "Filing cabinet",
+     "Bookcase",
+     "Drawers",
+     "Asymmetric shelves",
+     "Storage"
+    ]
+   }
+  },
+  {
+   "id": "b2-17",
+   "slug": "galley-kitchen-grey-wood",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Tasarım mutfaklar.jpg",
+   "imagePath": "/assets/gallery/b2-galley-kitchen-grey-wood.jpg",
+   "width": 736,
+   "height": 981,
+   "category": "residential",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "آشپزخانه کشیده با کابینت خاکستری و چوب‌رنگ",
+    "description": "آشپزخانه کشیده با کابینت‌های پایین خاکستری، یونیت‌های بالایی چوب‌رنگ و ردیف کمد نزدیک سقف. نور خطی زیر کابینت، دیوار بین‌کابینتی روشن با طرح رگه‌دار و چراغ‌های ریلی، سطوح کار را روشن کرده‌اند.",
+    "alt": "آشپزخانه کشیده با کابینت خاکستری و یونیت بالایی چوب‌رنگ",
+    "subcategory": "آشپزخانه و کابینت",
+    "workTypes": [
+     "کابینت"
+    ],
+    "tags": [
+     "آشپزخانه کشیده",
+     "کابینت خاکستری",
+     "ترکیب چوب و خاکستری",
+     "نور خطی",
+     "کابینت مرتفع"
+    ]
+   },
+   "en": {
+    "title": "Galley kitchen in grey and wood-look tones",
+    "description": "Grey base units sit beneath wood-look upper cabinets and a high storage row. Under-cabinet lighting, a pale veined splashback and track lights illuminate the working surfaces.",
+    "alt": "Galley kitchen in grey and wood-look tones — Kitchen & cabinetry",
+    "subcategory": "Kitchen & cabinetry",
+    "workTypes": [
+     "Cabinetry"
+    ],
+    "tags": [
+     "Galley kitchen",
+     "Grey cabinetry",
+     "Wood-look & grey combination",
+     "Linear lighting",
+     "Tall cabinetry"
+    ]
+   }
+  },
+  {
+   "id": "b2-18",
+   "slug": "tall-cabinet-open-middle",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Wooden File Cabinet, Office Storage Cabinet with Password Lock.jpg",
+   "imagePath": "/assets/gallery/b2-tall-cabinet-open-middle.jpg",
+   "width": 736,
+   "height": 1104,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "کمد ایستاده با بخش باز میانی",
+    "description": "کمد ایستاده با بدنه روشن، درهای دارای ظاهر چوب و طبقات داخلی خاکستری. بخش باز میانی برای قرارگیری کتاب و اشیای دکوراتیو در نظر گرفته شده و بازبودن بعضی درها، نحوه تقسیم‌بندی فضای داخلی را نشان می‌دهد.",
+    "alt": "کمد ایستاده با درهای باز و طبقات داخلی",
+    "subcategory": "کتابخانه و کمد اداری",
+    "workTypes": [
+     "کمد"
+    ],
+    "tags": [
+     "کمد اداری",
+     "کمد بایگانی",
+     "طبقه‌بندی داخلی",
+     "فضای ذخیره‌سازی"
+    ]
+   },
+   "en": {
+    "title": "Tall cabinet with an open middle section",
+    "description": "A pale cabinet combines wood-look doors and grey internal shelves. The open central section provides display space, while several open doors reveal the interior arrangement.",
+    "alt": "Tall cabinet with an open middle section — Office bookcases & storage",
+    "subcategory": "Office bookcases & storage",
+    "workTypes": [
+     "Wardrobe & storage"
+    ],
+    "tags": [
+     "Office storage",
+     "Filing cabinet",
+     "Internal shelving",
+     "Storage"
+    ]
+   }
+  },
+  {
+   "id": "b2-19",
+   "slug": "office-pantry-dining",
+   "batch": 2,
+   "originalPath": "/Users/hashemi/Downloads/Столовая в офисе в скандинавском стиле.jpg",
+   "imagePath": "/assets/gallery/b2-office-pantry-dining.jpg",
+   "width": 736,
+   "height": 800,
+   "category": "office",
+   "featured": false,
+   "contentStatus": "unverified",
+   "projectId": null,
+   "hidden": false,
+   "fa": {
+    "title": "آبدارخانه و فضای غذاخوری کارکنان",
+    "description": "فضای غذاخوری کوچک با کابینت‌های سفید و چوب‌رنگ، تجهیزات آماده‌سازی نوشیدنی و میزهای گرد. دیوار آبی، سقف تیره و چراغ‌های حلقه‌ای، این بخش را از فضای کاری رسمی متمایز کرده‌اند.",
+    "alt": "آبدارخانه با کابینت سفید و چوب‌رنگ و میزهای گرد",
+    "subcategory": "آبدارخانه و فضای استراحت",
+    "workTypes": [
+     "آبدارخانه",
+     "کابینت"
+    ],
+    "tags": [
+     "آبدارخانه",
+     "غذاخوری کارکنان",
+     "کابینت",
+     "فضای استراحت",
+     "چراغ حلقه‌ای"
+    ]
+   },
+   "en": {
+    "title": "Office pantry and staff dining area",
+    "description": "White and wood-look cabinets, drinks equipment and round tables form a small dining area. A blue wall, dark ceiling and ring-shaped lights distinguish it from the formal workspace.",
+    "alt": "Office pantry and staff dining area — Pantry & break area",
+    "subcategory": "Pantry & break area",
+    "workTypes": [
+     "Pantry",
+     "Cabinetry"
+    ],
+    "tags": [
+     "Pantry",
+     "Staff dining",
+     "Cabinetry",
+     "Break area",
+     "Ring light"
+    ]
+   }
+  }
+ ],
+ "site": {
+  "fa": {
+   "hero": {
+    "eyebrow": "طراحی داخلی / نجاری سفارشی / جزئیات",
+    "headline": [
+     "فضاهای سنجیده،",
+     "ساخته‌شده برای شما"
+    ],
+    "caption": "نمونه مرجع — آشپزخانه و کابینت"
+   },
+   "tagline": "طراحی و اجرای فضاهای داخلی و سازه‌های چوبی",
+   "intro": "هر فضا نیاز و ابعاد خودش را دارد. آتلیه فدک طراحی را با توجه به همین نیاز انجام می‌دهد و قطعات چوبی و تجهیزات را متناسب با فضا می‌سازد.",
+   "galleryIntro": "این بخش سبک‌ها و زمینه‌های طراحی را معرفی می‌کند؛ تصاویر هنوز به پروژه‌های مشخصی متصل نشده‌اند.",
+   "areas": [
+    {
+     "title": "اداری و سازمانی",
+     "text": "میز مدیریت، میز کار گروهی، کمد و قفسه‌بندی، اتاق جلسات و کانتر پذیرش.",
+     "image": "b1-12"
+    },
+    {
+     "title": "تجاری و فروشگاهی",
+     "text": "کانتر، ویترین و دیوارپوش برای فضاهایی که با مشتری سروکار دارند.",
+     "image": null
+    },
+    {
+     "title": "مسکونی",
+     "text": "کابینت آشپزخانه، کمد، تی‌وی‌وال و قفسه متناسب با فضای زندگی.",
+     "image": "b1-14"
+    }
+   ],
+   "services": [
+    {
+     "id": "interior-design",
+     "title": "طراحی داخلی",
+     "text": "بررسی فضا و نیاز، چیدمان، انتخاب مصالح و تهیه نقشه‌های ساخت.",
+     "images": [
+      "b1-14",
+      "b1-15"
+     ]
+    },
+    {
+     "id": "decoration",
+     "title": "اجرای دکوراسیون",
+     "text": "اجرای دیوارپوش، نورپردازی خطی، پارتیشن و جزئیات چوبی مطابق طرح.",
+     "images": [
+      "b1-12",
+      "b1-11"
+     ]
+    },
+    {
+     "id": "cabinets",
+     "title": "کابینت و کمد",
+     "text": "کابینت آشپزخانه، کمد و کتابخانه با ابعاد دقیق فضا.",
+     "images": [
+      "b1-13",
+      "b1-16",
+      "b1-17",
+      "b2-05",
+      "b2-12"
+     ]
+    },
+    {
+     "id": "office",
+     "title": "تجهیزات و دکور اداری",
+     "text": "میز مدیریت، میز کار گروهی، کانتر پذیرش و کمد بایگانی.",
+     "images": [
+      "b1-04",
+      "b1-07",
+      "b1-03",
+      "b1-08",
+      "b2-06",
+      "b2-11",
+      "b2-15"
+     ]
+    },
+    {
+     "id": "retail",
+     "title": "دکور فروشگاهی",
+     "text": "کانتر، ویترین و قفسه برای فروشگاه و فضاهای تجاری. نمونه تصویری این بخش پس از تأیید اضافه می‌شود.",
+     "images": []
+    },
+    {
+     "id": "custom-wood",
+     "title": "ساخت سفارشی چوبی",
+     "text": "قفسه، ویترین، تی‌وی‌وال و قطعات دکوراتیو بر اساس طرح و اندازه شما.",
+     "images": [
+      "b1-02",
+      "b1-05",
+      "b2-01",
+      "b2-09"
+     ]
+    }
+   ],
+   "process": [
+    {
+     "title": "گفت‌وگوی اولیه",
+     "text": "نیاز، کاربری و بودجه را با هم مرور می‌کنیم."
+    },
+    {
+     "title": "بررسی فضا و نیازها",
+     "text": "ابعاد و شرایط فضا را بررسی می‌کنیم."
+    },
+    {
+     "title": "طراحی و برآورد",
+     "text": "طرح و برآورد هزینه را برای تأیید ارائه می‌کنیم."
+    },
+    {
+     "title": "ساخت",
+     "text": "قطعات را مطابق طرح تأییدشده می‌سازیم."
+    },
+    {
+     "title": "نصب و تحویل",
+     "text": "قطعات را نصب و تحویل می‌دهیم."
+    }
+   ],
+   "about": {
+    "lead": "آتلیه فدک در زمینه طراحی داخلی، اجرای دکوراسیون و ساخت سفارشی سازه‌ها و تجهیزات چوبی فعالیت می‌کند.",
+    "body": [
+     "کار ما از فضا شروع می‌شود: کاربری، ابعاد، نور و نحوه استفاده. بر همین اساس طرح را می‌نویسیم و قطعات را سفارشی می‌سازیم تا با فضا هماهنگ باشند.",
+     "حوزه کار شامل فضاهای اداری و سازمانی، تجاری و فروشگاهی و مسکونی است؛ از کابینت و کمد تا میز مدیریت، کانتر پذیرش، دیوارپوش و قفسه."
+    ],
+    "approach": [
+     {
+      "title": "متناسب با فضا",
+      "text": "طرح از نیاز و ابعاد واقعی فضا شروع می‌شود، نه از الگوی آماده."
+     },
+     {
+      "title": "ساخت سفارشی",
+      "text": "قطعات برای همان فضا ساخته می‌شوند و با سایر اجزا هماهنگ‌اند."
+     }
+    ],
+    "photos": []
+   },
+   "projectTypes": [
+    "اداری و سازمانی",
+    "تجاری و فروشگاهی",
+    "مسکونی",
+    "کابینت و کمد",
+    "ساخت سفارشی چوبی",
+    "سایر"
+   ]
+  },
+  "en": {
+   "hero": {
+    "eyebrow": "INTERIORS / WOODWORK / DETAIL",
+    "headline": [
+     "Considered spaces.",
+     "Made personal."
+    ],
+    "caption": "REFERENCE STUDY — KITCHEN & CABINETRY"
+   },
+   "tagline": "Interior design, fit-out & bespoke woodwork",
+   "intro": "Every space has its own rhythm, proportions and purpose. We bring these together through considered interiors and woodwork made to fit.",
+   "galleryIntro": "A collection of reference spaces and details to explore design directions. These images are not presented as completed Fadak Atelier projects.",
+   "areas": [
+    {
+     "title": "Workplaces",
+     "text": "Executive desks, shared workstations, storage, meeting rooms and reception counters.",
+     "image": "b1-12"
+    },
+    {
+     "title": "Retail & commercial",
+     "text": "Counters, display units and wall treatments for spaces that welcome customers.",
+     "image": null
+    },
+    {
+     "title": "Residential",
+     "text": "Kitchens, wardrobes, media walls and shelving shaped around everyday life.",
+     "image": "b1-14"
+    }
+   ],
+   "services": [
+    {
+     "id": "interior-design",
+     "title": "Interior design",
+     "text": "Understanding your space, planning its layout, selecting materials and preparing drawings for production.",
+     "images": [
+      "b1-14",
+      "b1-15"
+     ]
+    },
+    {
+     "id": "decoration",
+     "title": "Interior fit-out",
+     "text": "Wall treatments, linear lighting, partitions and woodwork brought together around the approved design.",
+     "images": [
+      "b1-12",
+      "b1-11"
+     ]
+    },
+    {
+     "id": "cabinets",
+     "title": "Cabinetry & wardrobes",
+     "text": "Kitchen cabinetry, wardrobes and bookcases tailored to the precise dimensions of your space.",
+     "images": [
+      "b1-13",
+      "b1-16",
+      "b1-17",
+      "b2-05",
+      "b2-12"
+     ]
+    },
+    {
+     "id": "office",
+     "title": "Workplace interiors",
+     "text": "Executive desks, shared workstations, reception counters and filing storage.",
+     "images": [
+      "b1-04",
+      "b1-07",
+      "b1-03",
+      "b1-08",
+      "b2-06",
+      "b2-11",
+      "b2-15"
+     ]
+    },
+    {
+     "id": "retail",
+     "title": "Retail interiors",
+     "text": "Counters, display cases and shelving for retail and commercial settings. Images will be added once approved.",
+     "images": []
+    },
+    {
+     "id": "custom-wood",
+     "title": "Bespoke woodwork",
+     "text": "Shelving, display units, media walls and decorative pieces made to your design and dimensions.",
+     "images": [
+      "b1-02",
+      "b1-05",
+      "b2-01",
+      "b2-09"
+     ]
+    }
+   ],
+   "process": [
+    {
+     "title": "First conversation",
+     "text": "We discuss your needs, how the space will be used and your budget."
+    },
+    {
+     "title": "Understanding the space",
+     "text": "We review the dimensions and practical conditions of the space."
+    },
+    {
+     "title": "Design & estimate",
+     "text": "We present a design and cost estimate for your approval."
+    },
+    {
+     "title": "Production",
+     "text": "Pieces are made to the approved design."
+    },
+    {
+     "title": "Installation & handover",
+     "text": "We install the pieces and hand over the finished work."
+    }
+   ],
+   "about": {
+    "lead": "Fadak Atelier works across interior design, fit-out and bespoke woodwork for homes, workplaces and commercial spaces.",
+    "body": [
+     "We begin with the space: its purpose, proportions, light and daily use. These observations guide the design and the pieces we make for it.",
+     "Our work spans residential, workplace and retail interiors, from cabinetry and wardrobes to executive desks, reception counters, wall treatments and shelving."
+    ],
+    "approach": [
+     {
+      "title": "Shaped by the space",
+      "text": "Each design begins with the real needs and dimensions of its setting."
+     },
+     {
+      "title": "Made to fit",
+      "text": "Every piece is made for its setting and considered in relation to the whole."
+     }
+    ],
+    "photos": []
+   },
+   "projectTypes": [
+    "Workplaces",
+    "Retail & commercial",
+    "Residential",
+    "Cabinetry & wardrobes",
+    "Bespoke woodwork",
+    "Other"
+   ]
+  }
+ },
+ "contact": {
+  "phone": "+989199294498",
+  "whatsapp": "989199294498",
+  "instagram": "fadakatelier",
+  "telegram": "fadakatelier",
+  "address": {
+   "fa": "تهران، میدان تجریش، خیابان ولیعصر",
+   "en": "Tajrish Square, Valiasr Street, Tehran"
+  }
+ }
+}

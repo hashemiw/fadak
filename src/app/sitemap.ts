@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
-import { gallery } from "@/data/gallery";
+import { getGallery } from "@/lib/content";
 import { siteUrl } from "@/lib/site";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const gallery = await getGallery("fa");
   const paths = ["", "/gallery", "/services", "/about", "/contact", ...gallery.map(g => `/gallery/${g.slug}`)];
   return paths.map(p => ({
     url: `${siteUrl}/en${p}`,

@@ -17,6 +17,7 @@ type config struct {
 	origins               []string
 	secureCookie          bool
 	trustProxy            bool
+	seedFile              string
 }
 
 func env(k, d string) string {
@@ -35,6 +36,7 @@ func loadConfig() config {
 		origins:      strings.Split(env("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:3100"), ","),
 		secureCookie: env("COOKIE_SECURE", "false") == "true",
 		trustProxy:   env("TRUST_PROXY", "true") == "true",
+		seedFile:     env("SEED_FILE", "./seed/content.json"),
 	}
 }
 

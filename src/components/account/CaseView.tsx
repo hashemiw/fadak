@@ -3,7 +3,6 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { api, type CaseEvent, type CaseItem, type FileItem, type Message, type Note, type User } from "@/lib/api";
 import { account, errorText, eventText, fmtDate } from "@/data/account-i18n";
-import { gallery } from "@/data/gallery-refs";
 import type { Locale } from "@/lib/i18n";
 
 type Detail = { case: CaseItem; messages: Message[]; files: FileItem[]; events: CaseEvent[]; notes?: Note[] };
@@ -20,6 +19,8 @@ export default function CaseView({ locale, id, mode = "account" }: { locale: Loc
   const [state, setState] = useState<"loading" | "ok" | "missing">("loading");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [gallery, setGallery] = useState<{ id: string; slug: string; imagePath: string }[]>([]);
+  useEffect(() => { fetch("/api/public/gallery").then(r => r.json()).then(setGallery).catch(() => {}); }, []);
   const busyRef = useRef(false);
   busyRef.current = busy;
 

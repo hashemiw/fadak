@@ -7,7 +7,7 @@ import HeaderEn from "@/components/en/Header";
 import FooterEn from "@/components/en/Footer";
 import { brand } from "@/data/site";
 import { isLocale, locales } from "@/lib/i18n";
-import { contact } from "@/data/contact";
+import { getContact } from "@/lib/content";
 import { siteUrl } from "@/lib/site";
 
 export const generateStaticParams = () => locales.map(locale => ({ locale }));
@@ -20,6 +20,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const fa = locale === "fa";
+  const contact = await getContact();
   return <html lang={locale} dir={fa ? "rtl" : "ltr"}>
     <head>{fa ? <>
       <link rel="preload" href="/fonts/Vazirmatn-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />

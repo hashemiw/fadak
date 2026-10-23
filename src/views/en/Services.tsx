@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { gallery } from "@/data/gallery-en";
-import { services } from "@/data/site-en";
+import { getGallery, getSite } from "@/lib/content";
 
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const [gallery, site] = await Promise.all([getGallery("en"), getSite("en")]);
   return (
     <div className="wrap">
       <div className="page-head">
@@ -12,7 +12,7 @@ export default function ServicesPage() {
         <p className="lead">From design to production and installation, every service is shaped around your space and its needs.</p>
       </div>
       <div style={{ paddingBottom: 40 }}>
-        {services.map((s) => {
+        {site.services.map((s) => {
           const items = s.images.map((id) => gallery.find((g) => g.id === id)).filter((g) => !!g);
           return (
             <section className="svc-row" key={s.id} id={s.id}>

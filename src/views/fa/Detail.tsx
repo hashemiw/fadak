@@ -5,14 +5,16 @@ import Card from "@/components/Card";
 import PrevNext from "@/components/PrevNext";
 import FavoriteButton from "@/components/FavoriteButton";
 import Lightbox from "@/components/Lightbox";
-import { categories, gallery, getItem } from "@/data/gallery";
+import { categories } from "@/data/gallery";
+import { getGallery, getItem } from "@/lib/content";
 
 type Props = { params: Promise<{ slug: string }> };
 
 
 
 export default async function ItemPage({ params }: Props) {
-  const item = getItem((await params).slug);
+  const gallery = await getGallery("fa");
+  const item = await getItem("fa", (await params).slug);
   if (!item) notFound();
   const at = gallery.findIndex((g) => g.id === item.id);
   const near = (i: number) => (gallery[i] ? { slug: gallery[i].slug, title: gallery[i].title } : null);
@@ -28,7 +30,7 @@ export default async function ItemPage({ params }: Props) {
         </figure>
         <div>
           <h1>{item.title}</h1>
-          <p className="meta">{categories[item.category]} · {item.subcategory}</p>
+          <p className="meta">{[categories[item.category], item.subcategory].filter(Boolean).join(" · ")}</p>
           <p>{item.description}</p>
           <div className="labels" aria-label="نوع کار">
             {item.workTypes.map((t) => <span key={t} className="label wood">{t}</span>)}

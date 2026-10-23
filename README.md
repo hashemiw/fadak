@@ -10,6 +10,8 @@ npm run dev      # http://localhost:3000
 npm run build && npm start
 ```
 
+> **Content is now edited in the admin panel.** Gallery records, page texts and contact details live in the backend database (`backend/data`). The files in `src/data/` (`gallery.ts`, `gallery-batch2.ts`, `gallery-en.*`, `site*.ts`, `contact.ts`) are only the **first-start seed and the fallback** if the backend is unreachable; editing them does not change the live site once the database has content. Use the panel instead. The "Common edits" below describe the old file-based workflow.
+
 ## Where content lives
 
 | File | What |
@@ -89,3 +91,15 @@ Staff accounts (the `ADMIN_PHONE` one, plus any added under *Team*) sign in at t
 - **Team:** add staff members.
 - Customers see a "New reply" badge on projects with staff activity they have not opened yet.
 - Updates are polling-based (8 s), not push; there is no email/SMS/WhatsApp notification when a client writes, so keep the dashboard open or check it regularly.
+
+## Editing the site from the admin panel (Gallery and Texts tabs)
+
+In `/en/admin` or `/fa/admin` (staff login):
+
+- **Gallery:** add images (JPG/PNG/WebP up to 10 MB, aspect ratio kept), replace an image, edit title / description / alt / subcategory / work types / tags in **both languages**, category, featured, hidden, watermark flag, verification status and real project id, `3D model` flag; reorder with Up/Down; hide/show; delete. The page address (slug) is fixed at creation so links never break.
+- **Texts & contact:** hero text and image, tagline, intro, gallery description, areas of work, services (with related images), collaboration steps, About text, and the phone / WhatsApp / Instagram / Telegram / address, per language.
+- Saving calls `/revalidate` (staff-only) so visitors see changes immediately; otherwise pages refresh within ~15 seconds.
+- Uploaded images are stored in `backend/data/media` and served publicly from `/api/public/media/<name>` (optimised by Next.js like the others).
+- **Seed:** on first start the backend loads `backend/seed/content.json` (built by `node scripts/export-seed.mjs` from `src/data`) into an empty database. To reset content, stop the backend, delete `backend/data/fadak.db` and start again (this also deletes accounts and projects).
+- **Backups:** copy `backend/data/` (database + `uploads/` + `media/`). There is no automatic backup yet.
+- The public site falls back to the static `src/data` content if the backend is down, so it still renders (without your latest edits).

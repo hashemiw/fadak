@@ -1,29 +1,30 @@
 import Link from "next/link";
 import Image from "next/image";
 import Card from "@/components/Card";
-import { gallery } from "@/data/gallery";
-import { areas, brand, galleryIntro, process, services } from "@/data/site";
+import { getGallery, getSite } from "@/lib/content";
 
-export default function Home() {
-  const hero = gallery.find((g) => g.id === "b1-13")!;
+export default async function Home() {
+  const gallery = await getGallery("fa");
+  const site = await getSite("fa");
+  const hero = gallery.find((g) => g.id === site.hero.imageId && !g.watermark) ?? gallery.find((g) => !g.watermark) ?? gallery[0];
   const featured = gallery.filter((g) => g.featured);
   return (
     <>
       <section className="wrap hero">
         <div className="rise">
-          <p className="eyebrow">طراحی داخلی / نجاری سفارشی / جزئیات</p>
-          <h1>فضاهای سنجیده،<br />ساخته‌شده برای شما</h1>
-          <p>{brand.tagline}</p>
-          <p className="lead">{brand.intro}</p>
+          <p className="eyebrow">{site.hero.eyebrow}</p>
+          <h1>{site.hero.headline.map((line, i) => <span key={i}>{i > 0 && <br />}{line}</span>)}</h1>
+          <p>{site.tagline}</p>
+          <p className="lead">{site.intro}</p>
           <div className="actions">
             <Link href="/fa/gallery" className="btn">دیدن گالری</Link>
             <Link href="/fa/contact" className="btn ghost">گفت‌وگو درباره پروژه شما</Link>
           </div>
         </div>
-        <figure>
+        {hero && <figure>
           <Image src={hero.imagePath} alt={hero.alt} width={hero.width} height={hero.height} priority sizes="(max-width: 860px) 90vw, 440px" />
-          <figcaption>نمونه مرجع — آشپزخانه و کابینت</figcaption>
-        </figure>
+          <figcaption>{site.hero.caption}</figcaption>
+        </figure>}
       </section>
 
       <section className="section alt">
@@ -32,7 +33,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">گالری فضاها و جزئیات</p>
               <h2 className="h2">منتخبی از فضاها</h2>
-              <p className="lead">{galleryIntro}</p>
+              <p className="lead">{site.galleryIntro}</p>
             </div>
             <Link href="/fa/gallery" className="link">مشاهده کل گالری</Link>
           </div>
@@ -46,7 +47,7 @@ export default function Home() {
         <div className="wrap">
           <h2 className="h2" style={{ marginBottom: 32 }}>زمینه‌های فعالیت</h2>
           <div className="cols3">
-            {areas.map((a) => {
+            {site.areas.map((a) => {
               const img = gallery.find((g) => g.id === a.image);
               return (
                 <div className="area" key={a.title}>
@@ -67,7 +68,7 @@ export default function Home() {
             <Link href="/fa/services" className="link">جزئیات خدمات</Link>
           </div>
           <div className="svc-list">
-            {services.map((s) => (
+            {site.services.map((s) => (
               <div className="svc" key={s.id}>
                 <h3>{s.title}</h3>
                 <p>{s.text}</p>
@@ -84,7 +85,7 @@ export default function Home() {
             <h2 className="h2">طراحی و ساخت، در یک مسیر</h2>
           </div>
           <div>
-            <p>آتلیه فدک در زمینه طراحی داخلی، اجرای دکوراسیون و ساخت سفارشی سازه‌ها و تجهیزات چوبی فعالیت می‌کند.</p>
+            <p>{site.about.lead}</p>
             <p><Link href="/fa/about" className="link">بیشتر بخوانید</Link></p>
           </div>
         </div>
@@ -94,7 +95,7 @@ export default function Home() {
         <div className="wrap">
           <h2 className="h2" style={{ marginBottom: 32 }}>مراحل همکاری</h2>
           <ol className="steps">
-            {process.map((s) => <li key={s.title}><b>{s.title}</b><span>{s.text}</span></li>)}
+            {site.process.map((s) => <li key={s.title}><b>{s.title}</b><span>{s.text}</span></li>)}
           </ol>
         </div>
       </section>

@@ -1,14 +1,16 @@
 import ContactForm from "@/components/ContactForm";
-import { contact, addressLabel } from "@/data/contact";
+import { getContact, phoneDisplay } from "@/lib/content";
+import { contact } from "@/data/contact";
 
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const c = await getContact();
   const links = [
-    contact.phone && { k: "Phone", v: <a className="ltr" href={`tel:${contact.phone}`}>{contact.phoneDisplay}</a> },
-    contact.whatsapp && { k: "WhatsApp", v: <a className="link" href={`https://wa.me/${contact.whatsapp}`} rel="noopener">Chat on WhatsApp</a> },
-    contact.instagram && { k: "Instagram", v: <a className="ltr" href={`https://instagram.com/${contact.instagram}`} rel="noopener">@{contact.instagram}</a> },
-    contact.telegram && { k: "Telegram", v: <a className="ltr" href={`https://t.me/${contact.telegram}`} rel="noopener">@{contact.telegram}</a> },
-    contact.address && { k: "Address", v: addressLabel("en") },
+    c.phone && { k: "Phone", v: <a className="ltr" href={`tel:${c.phone}`}>{phoneDisplay(c.phone)}</a> },
+    c.whatsapp && { k: "WhatsApp", v: <a className="link" href={`https://wa.me/${c.whatsapp}`} rel="noopener">Chat on WhatsApp</a> },
+    c.instagram && { k: "Instagram", v: <a className="ltr" href={`https://instagram.com/${c.instagram}`} rel="noopener">@{c.instagram}</a> },
+    c.telegram && { k: "Telegram", v: <a className="ltr" href={`https://t.me/${c.telegram}`} rel="noopener">@{c.telegram}</a> },
+    c.address.en && { k: "Address", v: c.address.en },
   ].filter(Boolean) as { k: string; v: React.ReactNode }[];
 
   return (

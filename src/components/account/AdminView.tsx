@@ -3,9 +3,12 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { api, type CaseItem, type Customer, type Inquiry, type Stats, type User } from "@/lib/api";
 import { account, errorText, fmtDate } from "@/data/account-i18n";
+import { adminContent } from "@/data/admin-content-i18n";
+import GalleryManager from "./admin/GalleryManager";
+import ContentEditor from "./admin/ContentEditor";
 import type { Locale } from "@/lib/i18n";
 
-type Tab = "projects" | "enquiries" | "customers" | "team";
+type Tab = "projects" | "enquiries" | "customers" | "team" | "gallery" | "content";
 const POLL_MS = 8000;
 
 export default function AdminView({ locale }: { locale: Locale }) {
@@ -53,6 +56,7 @@ export default function AdminView({ locale }: { locale: Locale }) {
   const tabs: [Tab, string, number | undefined][] = [
     ["projects", a.tabs.projects, stats?.awaitingReply], ["enquiries", a.tabs.enquiries, stats?.newInquiries],
     ["customers", a.tabs.customers, undefined], ["team", a.tabs.team, undefined],
+    ["gallery", adminContent(locale).tabs.gallery, undefined], ["content", adminContent(locale).tabs.content, undefined],
   ];
   const by = stats?.byStatus ?? {};
   const active = ["new", "reviewing", "design", "production", "installation"].reduce((n, s) => n + (by[s] ?? 0), 0);
@@ -72,6 +76,8 @@ export default function AdminView({ locale }: { locale: Locale }) {
       {tab === "enquiries" && <Enquiries locale={locale} items={inquiries} onChange={load} />}
       {tab === "customers" && <Customers locale={locale} items={customers} />}
       {tab === "team" && <Team locale={locale} staff={staff} onChange={load} />}
+      {tab === "gallery" && <GalleryManager locale={locale} />}
+      {tab === "content" && <ContentEditor locale={locale} />}
       <p className="muted-note">{t.liveNote}</p>
     </div>
   );

@@ -48,6 +48,9 @@ func newServer(cfg config) (*server, error) {
 			return nil, err
 		}
 	}
+	if err := s.seedContent(cfg.seedFile); err != nil {
+		return nil, err
+	}
 	return s, nil
 }
 
@@ -71,6 +74,16 @@ func (s *server) routes() http.Handler {
 	m.HandleFunc("GET /api/me", s.auth(s.handleMe))
 	m.HandleFunc("DELETE /api/me", s.auth(s.handleDeleteMe))
 	m.HandleFunc("POST /api/inquiries", s.handleInquiry)
+	m.HandleFunc("GET /api/public/gallery", s.handlePublicGallery)
+	m.HandleFunc("GET /api/public/site", s.handlePublicSite)
+	m.HandleFunc("GET /api/public/media/{name}", s.handleMedia)
+	m.HandleFunc("GET /api/admin/gallery", s.auth(s.admin(s.handleAdminGallery)))
+	m.HandleFunc("POST /api/admin/gallery", s.auth(s.admin(s.handleCreateGallery)))
+	m.HandleFunc("PUT /api/admin/gallery/{id}", s.auth(s.admin(s.handleUpdateGallery)))
+	m.HandleFunc("DELETE /api/admin/gallery/{id}", s.auth(s.admin(s.handleDeleteGallery)))
+	m.HandleFunc("POST /api/admin/gallery-order", s.auth(s.admin(s.handleReorderGallery)))
+	m.HandleFunc("PUT /api/admin/content/{key}", s.auth(s.admin(s.handlePutContent)))
+	m.HandleFunc("POST /api/admin/media", s.auth(s.admin(s.handleUploadMedia)))
 	m.HandleFunc("GET /api/cases", s.auth(s.handleListCases))
 	m.HandleFunc("POST /api/cases", s.auth(s.handleCreateCase))
 	m.HandleFunc("GET /api/cases/{id}", s.auth(s.handleGetCase))

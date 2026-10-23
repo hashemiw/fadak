@@ -1,28 +1,30 @@
 import Link from "next/link";
 import Image from "next/image";
 import Card from "@/components/en/Card";
-import { gallery } from "@/data/gallery-en";
-import { areas, brand, galleryIntro, process, services } from "@/data/site-en";
+import { getGallery, getSite } from "@/lib/content";
 
-export default function Home() {
-  const hero = gallery.find((g) => g.id === "b1-13")!;
+export default async function Home() {
+  const gallery = await getGallery("en");
+  const site = await getSite("en");
+  const hero = gallery.find((g) => g.id === site.hero.imageId && !g.watermark) ?? gallery.find((g) => !g.watermark) ?? gallery[0];
   const featured = gallery.filter((g) => g.featured);
   return (
     <>
       <section className="wrap hero">
         <div className="rise">
-          <p className="eyebrow">INTERIORS / WOODWORK / DETAIL</p>
-          <h1>Considered spaces.<br />Made personal.</h1>
-          <p>{brand.tagline}</p>
-          <p className="lead">{brand.intro}</p>
+          <p className="eyebrow">{site.hero.eyebrow}</p>
+          <h1>{site.hero.headline.map((line, i) => <span key={i}>{i > 0 && <br />}{line}</span>)}</h1>
+          <p>{site.tagline}</p>
+          <p className="lead">{site.intro}</p>
           <div className="actions">
             <Link href="/en/gallery" className="btn">Explore the gallery</Link>
             <Link href="/en/contact" className="btn ghost">Discuss your space</Link>
           </div>
         </div>
-        <figure>
+        {hero && <figure>
           <Image src={hero.imagePath} alt={hero.alt} width={hero.width} height={hero.height} priority sizes="(max-width: 860px) 90vw, 440px" />
-        <figcaption>REFERENCE STUDY — KITCHEN &amp; CABINETRY</figcaption></figure>
+          <figcaption>{site.hero.caption}</figcaption>
+        </figure>}
       </section>
 
       <section className="section alt">
@@ -31,7 +33,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">Spaces & details</p>
               <h2 className="h2">A study in space</h2>
-              <p className="lead">{galleryIntro}</p>
+              <p className="lead">{site.galleryIntro}</p>
             </div>
             <Link href="/en/gallery" className="link">View the collection</Link>
           </div>
@@ -45,7 +47,7 @@ export default function Home() {
         <div className="wrap">
           <h2 className="h2" style={{ marginBottom: 32 }}>Spaces we work with</h2>
           <div className="cols3">
-            {areas.map((a) => {
+            {site.areas.map((a) => {
               const img = gallery.find((g) => g.id === a.image);
               return (
                 <div className="area" key={a.title}>
@@ -66,7 +68,7 @@ export default function Home() {
             <Link href="/en/services" className="link">Explore our services</Link>
           </div>
           <div className="svc-list">
-            {services.map((s) => (
+            {site.services.map((s) => (
               <div className="svc" key={s.id}>
                 <h3>{s.title}</h3>
                 <p>{s.text}</p>
@@ -83,7 +85,7 @@ export default function Home() {
             <h2 className="h2">From first idea to final detail</h2>
           </div>
           <div>
-            <p>Fadak Atelier works across interior design, fit-out and bespoke woodwork for homes, workplaces and commercial spaces.</p>
+            <p>{site.about.lead}</p>
             <p><Link href="/en/about" className="link">Discover the atelier</Link></p>
           </div>
         </div>
@@ -93,7 +95,7 @@ export default function Home() {
         <div className="wrap">
           <h2 className="h2" style={{ marginBottom: 32 }}>How we work</h2>
           <ol className="steps">
-            {process.map((s) => <li key={s.title}><b>{s.title}</b><span>{s.text}</span></li>)}
+            {site.process.map((s) => <li key={s.title}><b>{s.title}</b><span>{s.text}</span></li>)}
           </ol>
         </div>
       </section>

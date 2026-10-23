@@ -38,6 +38,9 @@ CREATE TABLE IF NOT EXISTS case_events (
 CREATE TABLE IF NOT EXISTS case_notes (
   id INTEGER PRIMARY KEY, case_id INTEGER NOT NULL REFERENCES cases(id) ON DELETE CASCADE,
   author_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, body TEXT NOT NULL, created_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS gallery_items (
+  id TEXT PRIMARY KEY, slug TEXT NOT NULL UNIQUE, sort_order INTEGER NOT NULL, data TEXT NOT NULL, updated_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS site_content (key TEXT PRIMARY KEY, value TEXT NOT NULL, updated_at INTEGER NOT NULL);
 CREATE INDEX IF NOT EXISTS idx_events_case ON case_events(case_id);
 CREATE INDEX IF NOT EXISTS idx_notes_case ON case_notes(case_id);
 CREATE INDEX IF NOT EXISTS idx_cases_user ON cases(user_id);

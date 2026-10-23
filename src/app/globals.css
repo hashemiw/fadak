@@ -71,3 +71,18 @@ label.upload input { padding-top: 10px; }
 .timeline li { padding: 6px 16px; }
 .timeline small { color: var(--muted); }
 .notes-box { margin-top: 40px; padding: 8px 20px 20px; border: 1px dashed var(--muted); }
+
+/* admin content */
+.gm-row { display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: center; padding: 14px 0; }
+.gm-row img { width: 64px; height: 64px; object-fit: cover; }
+.gm-main { display: grid; gap: 4px; min-width: 0; }
+.gm-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center; }
+.gm-actions .link-btn:disabled { opacity: .35; cursor: default; }
+.gm-form { max-width: 760px; }
+.loc-block { border: 1px solid var(--line); padding: 16px; display: grid; gap: 14px; }
+.loc-block legend { font-weight: 700; padding-inline: 8px; }
+.gm-image { display: grid; gap: 10px; justify-items: start; }
+.ed-list { display: grid; gap: 14px; }
+.ed-item { border: 1px solid var(--line); padding: 14px; display: grid; gap: 12px; }
+.ed-item .gm-actions { grid-column: auto; }
+select[multiple] { min-height: 160px; }

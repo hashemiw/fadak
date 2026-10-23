@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { about, process } from "@/data/site-en";
+import { getSite } from "@/lib/content";
 
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const { about, process } = await getSite("en");
   return (
     <>
       <div className="wrap">
