@@ -1,8 +1,5 @@
-export const serviceAreas = [
-  { fa: "تهران", en: "Tehran" }, { fa: "کرج", en: "Karaj" }, { fa: "قم", en: "Qom" },
-  { fa: "قزوین", en: "Qazvin" }, { fa: "مازندران", en: "Mazandaran" },
-];
-export const serviceAreaLabel = (locale: "en" | "fa") => serviceAreas.map(area => area[locale]).join(locale === "fa" ? "، " : ", ");
+export const address = { fa: "تهران، میدان تجریش، خیابان ولیعصر", en: "Tajrish Square, Valiasr Street, Tehran" };
+export const addressLabel = (locale: "en" | "fa") => address[locale];
 // Fill in real values to enable the matching buttons/links. Empty = hidden.
 export const contact = {
   phone: "+989199294498",
@@ -10,7 +7,7 @@ export const contact = {
   whatsapp: "989199294498",
   instagram: "fadakatelier",
   telegram: "fadakatelier",
-  serviceArea: serviceAreaLabel("fa"), // e.g. "تهران و حومه"
+  address: address.fa, // shown when non-empty; the English text is address.en
   // Same-origin path proxied to the Go backend (see next.config.mjs). Empty = form stays a disabled preview.
   formEndpoint: "/api/inquiries",
 };

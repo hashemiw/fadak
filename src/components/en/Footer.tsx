@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { brand, nav } from "@/data/site-en";
-import { contact, serviceAreaLabel } from "@/data/contact";
+import { contact, addressLabel } from "@/data/contact";
 
 export default function Footer() {
   return (
@@ -13,12 +13,12 @@ export default function Footer() {
         <nav aria-label="Footer navigation">
           {nav.map((n) => <Link key={n.href} href={`/en${n.href === "/" ? "" : n.href}`}>{n.label}</Link>)}
         </nav>
-        {(contact.phone || contact.instagram || contact.serviceArea) && (
+        {(contact.phone || contact.instagram || contact.address) && (
           <div>
             {contact.phone && <p><a className="ltr" href={`tel:${contact.phone}`}>{contact.phoneDisplay}</a></p>}
             {contact.instagram && <p><a className="ltr" href={`https://instagram.com/${contact.instagram}`} rel="noopener">@{contact.instagram}</a></p>}
             {contact.telegram && <p><a className="ltr" href={`https://t.me/${contact.telegram}`} rel="noopener">Telegram @{contact.telegram}</a></p>}
-            {contact.serviceArea && <p>{serviceAreaLabel("en")}</p>}
+            {contact.address && <p>{addressLabel("en")}</p>}
           </div>
         )}
       </div>

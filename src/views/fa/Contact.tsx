@@ -8,7 +8,7 @@ export default function ContactPage() {
     contact.whatsapp && { k: "واتساپ", v: <a className="link" href={`https://wa.me/${contact.whatsapp}`} rel="noopener">گفت‌وگو در واتساپ</a> },
     contact.instagram && { k: "اینستاگرام", v: <a className="ltr" href={`https://instagram.com/${contact.instagram}`} rel="noopener">@{contact.instagram}</a> },
     contact.telegram && { k: "تلگرام", v: <a className="ltr" href={`https://t.me/${contact.telegram}`} rel="noopener">@{contact.telegram}</a> },
-    contact.serviceArea && { k: "محدوده فعالیت", v: contact.serviceArea },
+    contact.address && { k: "نشانی", v: contact.address },
   ].filter(Boolean) as { k: string; v: React.ReactNode }[];
 
   return (

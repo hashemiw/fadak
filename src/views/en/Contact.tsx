@@ -1,5 +1,5 @@
 import ContactForm from "@/components/ContactForm";
-import { contact, serviceAreaLabel } from "@/data/contact";
+import { contact, addressLabel } from "@/data/contact";
 
 
 export default function ContactPage() {
@@ -8,7 +8,7 @@ export default function ContactPage() {
     contact.whatsapp && { k: "WhatsApp", v: <a className="link" href={`https://wa.me/${contact.whatsapp}`} rel="noopener">Chat on WhatsApp</a> },
     contact.instagram && { k: "Instagram", v: <a className="ltr" href={`https://instagram.com/${contact.instagram}`} rel="noopener">@{contact.instagram}</a> },
     contact.telegram && { k: "Telegram", v: <a className="ltr" href={`https://t.me/${contact.telegram}`} rel="noopener">@{contact.telegram}</a> },
-    contact.serviceArea && { k: "Service areas in Iran", v: serviceAreaLabel("en") },
+    contact.address && { k: "Address", v: addressLabel("en") },
   ].filter(Boolean) as { k: string; v: React.ReactNode }[];
 
   return (
